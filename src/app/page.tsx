@@ -6,6 +6,7 @@ import PorQueEsteOrden from '@/components/PorQueEsteOrden'
 import ComoTrabajamos from '@/components/ComoTrabajamos'
 import ParaQuienEs from '@/components/ParaQuienEs'
 import Resultados from '@/components/Resultados'
+import LaOferta from '@/components/LaOferta'
 import SobreNosotros from '@/components/SobreNosotros'
 import CTAContacto from '@/components/CTAContacto'
 import Footer from '@/components/Footer'
@@ -21,6 +22,7 @@ export default function Home() {
       <ComoTrabajamos />
       <ParaQuienEs />
       <Resultados />
+      <LaOferta />
       <SobreNosotros />
       <CTAContacto />
       <Footer />
