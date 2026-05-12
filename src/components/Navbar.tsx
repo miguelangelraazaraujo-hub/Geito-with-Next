@@ -27,11 +27,14 @@ export default function Navbar() {
     >
       <nav className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
         {/* Logo */}
-        <a href="#" className="flex items-center gap-3">
-          <div className="w-8 h-8 rounded-lg bg-[#7fc244] flex items-center justify-center">
-            <span className="text-[#0f1a0a] font-bold text-sm" style={{ fontFamily: "'Syne', sans-serif" }}>G</span>
-          </div>
-          <span className="text-white font-bold text-lg" style={{ fontFamily: "'Syne', sans-serif" }}>Geito</span>
+        <a href="#" className="flex items-center">
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src="/Geito-logo.jpeg"
+            alt="Geito"
+            className="h-9 w-auto rounded-lg"
+            style={{ filter: 'invert(1)' }}
+          />
         </a>
 
         {/* Desktop links */}

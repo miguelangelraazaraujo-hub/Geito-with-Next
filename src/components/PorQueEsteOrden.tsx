@@ -1,19 +1,21 @@
+import { FadeIn, FadeInStagger, FadeInItem } from './FadeIn'
+
 export default function PorQueEsteOrden() {
   return (
     <section className="bg-white py-24 lg:py-32" id="por-que">
       <div className="max-w-6xl mx-auto px-6">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           {/* Left: visual */}
-          <div className="relative">
-            <div className="space-y-3">
+          <FadeIn direction="left">
+            <FadeInStagger className="space-y-3" stagger={0.1}>
               {[
                 { label: 'Sin procesos', sub: 'La digitalización no sabe qué automatizar', ok: false },
                 { label: 'Sin digitalización', sub: 'La automatización no tiene datos que mover', ok: false },
                 { label: 'Sin automatización', sub: 'La IA no tiene con qué trabajar', ok: false },
                 { label: 'Con las 4 etapas', sub: 'Todo encaja y se escala de verdad', ok: true },
               ].map((item, i) => (
+                <FadeInItem key={i}>
                 <div
-                  key={i}
                   className={`flex items-center gap-4 p-5 rounded-xl border ${
                     item.ok
                       ? 'bg-[#f8fdf4] border-[#639922]/40'
@@ -45,12 +47,13 @@ export default function PorQueEsteOrden() {
                     </p>
                   </div>
                 </div>
+                </FadeInItem>
               ))}
-            </div>
-          </div>
+            </FadeInStagger>
+          </FadeIn>
 
           {/* Right: copy */}
-          <div>
+          <FadeIn direction="right" delay={0.1}>
             <span className="text-[#639922] text-xs tracking-[0.2em] uppercase font-medium">
               Por qué este orden importa
             </span>
@@ -79,7 +82,7 @@ export default function PorQueEsteOrden() {
                 No hay atajos. Pero sí hay un camino claro.
               </p>
             </div>
-          </div>
+          </FadeIn>
         </div>
       </div>
     </section>

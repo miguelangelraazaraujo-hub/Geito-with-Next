@@ -13,13 +13,15 @@ const noPerfiles = [
   'Proyectos sin presupuesto mínimo para implementar',
 ]
 
+import { FadeIn, FadeInStagger, FadeInItem } from './FadeIn'
+
 export default function ParaQuienEs() {
   return (
     <section className="bg-[#0f1a0a] py-24 lg:py-32" id="para-quien">
       <div className="max-w-6xl mx-auto px-6">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
           {/* Left */}
-          <div>
+          <FadeIn direction="left">
             <span className="text-[#7fc244] text-xs tracking-[0.2em] uppercase font-medium">
               Para quién es
             </span>
@@ -29,22 +31,24 @@ export default function ParaQuienEs() {
             >
               Geito es para ti si...
             </h2>
-            <div className="space-y-4">
+            <FadeInStagger className="space-y-4" stagger={0.08}>
               {perfiles.map((p, i) => (
-                <div key={i} className="flex items-start gap-4">
-                  <div className="w-6 h-6 rounded-full bg-[#639922]/20 border border-[#639922]/40 flex items-center justify-center shrink-0 mt-0.5">
-                    <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="#7fc244" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                      <polyline points="2 6 5 9 10 3" />
-                    </svg>
+                <FadeInItem key={i}>
+                  <div className="flex items-start gap-4">
+                    <div className="w-6 h-6 rounded-full bg-[#639922]/20 border border-[#639922]/40 flex items-center justify-center shrink-0 mt-0.5">
+                      <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="#7fc244" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                        <polyline points="2 6 5 9 10 3" />
+                      </svg>
+                    </div>
+                    <p className="text-white/80 leading-relaxed">{p}</p>
                   </div>
-                  <p className="text-white/80 leading-relaxed">{p}</p>
-                </div>
+                </FadeInItem>
               ))}
-            </div>
-          </div>
+            </FadeInStagger>
+          </FadeIn>
 
           {/* Right */}
-          <div>
+          <FadeIn direction="right" delay={0.15}>
             <span className="text-white/30 text-xs tracking-[0.2em] uppercase font-medium">
               No es para ti si...
             </span>
@@ -84,7 +88,7 @@ export default function ParaQuienEs() {
                 </svg>
               </a>
             </div>
-          </div>
+          </FadeIn>
         </div>
       </div>
     </section>

@@ -1,27 +1,22 @@
+import { FadeIn } from './FadeIn'
+
 export default function SobreNosotros() {
   return (
     <section className="bg-[#f5f5f0] py-24 lg:py-32" id="nosotros">
       <div className="max-w-6xl mx-auto px-6">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           {/* Left: visual / identity */}
-          <div className="relative">
+          <FadeIn direction="left">
             <div className="bg-[#0f1a0a] rounded-3xl p-12 flex flex-col justify-between min-h-[420px]">
               {/* Logo mark */}
               <div>
-                <div className="w-16 h-16 rounded-2xl bg-[#7fc244] flex items-center justify-center mb-8">
-                  <span
-                    className="text-[#0f1a0a] font-bold text-2xl"
-                    style={{ fontFamily: "'Syne', sans-serif" }}
-                  >
-                    G
-                  </span>
-                </div>
-                <h3
-                  className="text-3xl font-bold text-white mb-2"
-                  style={{ fontFamily: "'Syne', sans-serif" }}
-                >
-                  Geito
-                </h3>
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src="/Geito-logo.jpeg"
+                  alt="Geito"
+                  className="h-12 w-auto mb-6 rounded-xl"
+                  style={{ filter: 'invert(1)' }}
+                />
                 <p className="text-[#7fc244] text-sm">Transformación digital B2B</p>
               </div>
 
@@ -35,10 +30,10 @@ export default function SobreNosotros() {
                 ))}
               </div>
             </div>
-          </div>
+          </FadeIn>
 
           {/* Right: copy */}
-          <div>
+          <FadeIn direction="right" delay={0.15}>
             <span className="text-[#639922] text-xs tracking-[0.2em] uppercase font-medium">
               Sobre Geito
             </span>
@@ -66,7 +61,7 @@ export default function SobreNosotros() {
                 Nuestro éxito se mide por el tuyo.
               </p>
             </div>
-          </div>
+          </FadeIn>
         </div>
       </div>
     </section>

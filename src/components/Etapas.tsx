@@ -1,6 +1,9 @@
 'use client'
 
-import { useState } from 'react'
+import { useState, useEffect, useRef, useCallback } from 'react'
+import { motion, AnimatePresence } from 'motion/react'
+
+const INTERVAL_MS = 11000
 
 const etapas = [
   {
@@ -83,6 +86,26 @@ const etapas = [
 export default function Etapas() {
   const [activa, setActiva] = useState(0)
   const etapa = etapas[activa]
+  const intervalRef = useRef<NodeJS.Timeout | null>(null)
+
+  const startInterval = useCallback(() => {
+    if (intervalRef.current) clearInterval(intervalRef.current)
+    intervalRef.current = setInterval(() => {
+      setActiva((prev) => (prev + 1) % etapas.length)
+    }, INTERVAL_MS)
+  }, [])
+
+  useEffect(() => {
+    startInterval()
+    return () => {
+      if (intervalRef.current) clearInterval(intervalRef.current)
+    }
+  }, [startInterval])
+
+  const handleClick = (i: number) => {
+    setActiva(i)
+    startInterval()
+  }
 
   return (
     <section className="bg-[#f5f5f0] py-24 lg:py-32" id="metodologia">
@@ -111,33 +134,40 @@ export default function Etapas() {
             {etapas.map((e, i) => (
               <button
                 key={i}
-                onClick={() => setActiva(i)}
-                className={`w-full text-left p-6 rounded-2xl border transition-all duration-300 ${
-                  activa === i
-                    ? 'bg-[#0f1a0a] border-[#7fc244] shadow-lg shadow-[#639922]/10'
-                    : 'bg-white border-gray-100 hover:border-gray-200'
-                }`}
+                onClick={() => handleClick(i)}
+                className={`relative w-full text-left p-6 rounded-2xl border transition-all duration-300 overflow-hidden ${activa === i
+                  ? 'bg-[#0f1a0a] border-[#7fc244] shadow-lg shadow-[#639922]/10'
+                  : 'bg-white border-gray-100 hover:border-gray-200'
+                  }`}
               >
+                {/* Progress bar */}
+                {activa === i && (
+                  <motion.div
+                    key={activa}
+                    className="absolute bottom-0 left-0 h-0.5 bg-[#7fc244]/50 origin-left"
+                    initial={{ scaleX: 0 }}
+                    animate={{ scaleX: 1 }}
+                    transition={{ duration: INTERVAL_MS / 1000, ease: 'linear' }}
+                    style={{ width: '100%' }}
+                  />
+                )}
                 <div className="flex items-center gap-4">
                   <span
-                    className={`text-xs font-mono font-bold tracking-wider ${
-                      activa === i ? 'text-[#7fc244]' : 'text-gray-300'
-                    }`}
+                    className={`text-xs font-mono font-bold tracking-wider ${activa === i ? 'text-[#7fc244]' : 'text-gray-300'
+                      }`}
                   >
                     {e.numero}
                   </span>
                   <span
-                    className={`text-lg font-semibold ${
-                      activa === i ? 'text-white' : 'text-[#0f1a0a]'
-                    }`}
+                    className={`text-lg font-semibold ${activa === i ? 'text-white' : 'text-[#0f1a0a]'
+                      }`}
                     style={{ fontFamily: "'Syne', sans-serif" }}
                   >
                     {e.titulo}
                   </span>
                   <span
-                    className={`ml-auto text-sm ${
-                      activa === i ? 'text-[#7fc244]/70' : 'text-gray-400'
-                    }`}
+                    className={`ml-auto text-sm ${activa === i ? 'text-[#7fc244]/70' : 'text-gray-400'
+                      }`}
                   >
                     {e.tagline}
                   </span>
@@ -148,21 +178,31 @@ export default function Etapas() {
 
           {/* Detail */}
           <div className="bg-[#0f1a0a] rounded-2xl p-8 lg:p-10 border border-[#7fc244]/20 min-h-[320px]">
-            <div className="text-[#7fc244] mb-6">{etapa.icon}</div>
-            <h3
-              className="text-2xl font-bold text-white mb-2"
-              style={{ fontFamily: "'Syne', sans-serif" }}
-            >
-              {etapa.titulo}
-            </h3>
-            <p className="text-[#7fc244] text-sm mb-6">{etapa.tagline}</p>
-            <p className="text-white/70 leading-relaxed mb-8">{etapa.descripcion}</p>
-            <div className="flex items-start gap-3 bg-[#7fc244]/10 rounded-xl p-4 border border-[#7fc244]/20">
-              <svg width="18" height="18" viewBox="0 0 18 18" fill="none" stroke="#7fc244" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="mt-0.5 shrink-0">
-                <polyline points="3 9 7 13 15 5" />
-              </svg>
-              <span className="text-[#7fc244] text-sm font-medium">{etapa.resultado}</span>
-            </div>
+            <AnimatePresence mode="wait">
+              <motion.div
+                key={activa}
+                initial={{ opacity: 0, y: 12 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -12 }}
+                transition={{ duration: 0.3, ease: [0.25, 0.1, 0.25, 1] }}
+              >
+                <div className="text-[#7fc244] mb-6">{etapa.icon}</div>
+                <h3
+                  className="text-2xl font-bold text-white mb-2"
+                  style={{ fontFamily: "'Syne', sans-serif" }}
+                >
+                  {etapa.titulo}
+                </h3>
+                <p className="text-[#7fc244] text-sm mb-6">{etapa.tagline}</p>
+                <p className="text-white/70 leading-relaxed mb-8">{etapa.descripcion}</p>
+                <div className="flex items-start gap-3 bg-[#7fc244]/10 rounded-xl p-4 border border-[#7fc244]/20">
+                  <svg width="18" height="18" viewBox="0 0 18 18" fill="none" stroke="#7fc244" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="mt-0.5 shrink-0">
+                    <polyline points="3 9 7 13 15 5" />
+                  </svg>
+                  <span className="text-[#7fc244] text-sm font-medium">{etapa.resultado}</span>
+                </div>
+              </motion.div>
+            </AnimatePresence>
           </div>
         </div>
       </div>
