@@ -38,12 +38,12 @@ export default function Navbar() {
         </a>
 
         {/* Desktop links */}
-        <div className="hidden md:flex items-center gap-8">
+        <div className="hidden lg:flex items-center gap-6 xl:gap-8 mx-6 xl:mx-10">
           {links.map((l) => (
             <a
               key={l.href}
               href={l.href}
-              className="text-white/60 hover:text-white text-sm transition-colors"
+              className="text-white/60 hover:text-white text-sm transition-colors whitespace-nowrap"
             >
               {l.label}
             </a>
@@ -53,7 +53,7 @@ export default function Navbar() {
         {/* CTA */}
         <a
           href="#contacto"
-          className="hidden md:inline-flex items-center gap-2 bg-[#7fc244] text-[#0f1a0a] font-semibold px-5 py-2.5 rounded-full hover:bg-[#9fd660] transition-colors text-sm"
+          className="hidden lg:inline-flex items-center gap-2 bg-[#7fc244] text-[#0f1a0a] font-semibold px-5 py-2.5 rounded-full hover:bg-[#9fd660] transition-colors text-sm whitespace-nowrap"
         >
           Diagnóstico gratuito
         </a>
@@ -61,7 +61,7 @@ export default function Navbar() {
         {/* Mobile menu button */}
         <button
           onClick={() => setOpen(!open)}
-          className="md:hidden text-white/70 hover:text-white"
+          className="lg:hidden text-white/70 hover:text-white"
           aria-label="Menú"
         >
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round">
@@ -82,7 +82,7 @@ export default function Navbar() {
 
       {/* Mobile menu */}
       {open && (
-        <div className="md:hidden bg-[#0f1a0a] border-t border-white/5 px-6 py-6 space-y-4">
+        <div className="lg:hidden bg-[#0f1a0a] border-t border-white/5 px-6 py-6 space-y-4">
           {links.map((l) => (
             <a
               key={l.href}

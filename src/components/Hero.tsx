@@ -144,8 +144,8 @@ export default function Hero() {
 
             <p className="text-lg text-white/60 max-w-xl mb-8 leading-relaxed">
               Implantamos procesos, herramientas digitales y automatizaciones con n8n e
-              inteligencia artificial. Sin saltar etapas. Con compromiso de plazos y
-              resultados.
+              inteligencia artificial. Método secuencial para empresas B2B de 10 a 50
+              personas. Con compromiso de plazos y resultados.
             </p>
 
             {/* Numerical proof bullets */}

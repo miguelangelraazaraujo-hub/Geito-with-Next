@@ -17,26 +17,33 @@ export default function CTAContacto() {
           {/* Left */}
           <div>
             <span className="text-[#7fc244] text-xs tracking-[0.2em] uppercase font-medium">
-              Empieza hoy
+              Diagnóstico estratégico
             </span>
             <h2
               className="text-4xl lg:text-5xl font-bold text-white mt-4 mb-8 leading-tight"
               style={{ fontFamily: "'Syne', sans-serif" }}
             >
-              El primer paso
+              30 minutos.
               <br />
-              no tiene coste.
+              <span className="text-[#7fc244]">Cero PowerPoint.</span>
             </h2>
+            <p className="text-white/60 leading-relaxed mb-6 max-w-md">
+              Tú me cuentas tu operativa actual. Yo te digo si podemos ayudarte —
+              <span className="text-white/80"> a veces decimos que no, lo decimos en
+              directo y sin rodeos.</span>
+            </p>
             <p className="text-white/60 leading-relaxed mb-10 max-w-md">
-              Solicita tu diagnóstico gratuito. En una llamada de 30 minutos analizamos
-              tu situación y te decimos si Geito puede ayudarte, y cómo.
+              Si encajamos, sales con las 3-5 oportunidades de mayor ROI identificadas
+              en vivo y un rango de inversión orientativo. Si no encajamos, sales con
+              las mismas 3 oportunidades.
             </p>
 
             <div className="space-y-4">
               {[
-                'Sin compromiso de contratación',
-                'Respuesta en menos de 24h',
-                'Diagnóstico personalizado para tu empresa',
+                'Sin pedir teléfono · Sin newsletter',
+                'Sin "asesor comercial" llamándote después',
+                'Roadmap utilizable aunque no nos contrates',
+                'Plazas limitadas: 3 nuevos clientes este trimestre',
               ].map((item, i) => (
                 <div key={i} className="flex items-center gap-3">
                   <svg width="18" height="18" viewBox="0 0 18 18" fill="none" stroke="#7fc244" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
@@ -84,20 +91,36 @@ export default function CTAContacto() {
                     />
                   </div>
                 </div>
-                <div>
-                  <label className="block text-xs text-white/50 uppercase tracking-wider mb-2">Email</label>
-                  <input
-                    type="email"
-                    required
-                    placeholder="tu@empresa.com"
-                    className="w-full bg-white/5 border border-white/10 text-white placeholder-white/30 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-[#639922]/60 transition-colors"
-                  />
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                  <div>
+                    <label className="block text-xs text-white/50 uppercase tracking-wider mb-2">Email</label>
+                    <input
+                      type="email"
+                      required
+                      placeholder="tu@empresa.com"
+                      className="w-full bg-white/5 border border-white/10 text-white placeholder-white/30 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-[#639922]/60 transition-colors"
+                    />
+                  </div>
+                  <div>
+                    <label className="block text-xs text-white/50 uppercase tracking-wider mb-2">Tamaño del equipo</label>
+                    <select
+                      required
+                      defaultValue=""
+                      className="w-full bg-white/5 border border-white/10 text-white rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-[#639922]/60 transition-colors"
+                    >
+                      <option value="" disabled>Selecciona</option>
+                      <option value="1-9">1-9 personas</option>
+                      <option value="10-25">10-25 personas</option>
+                      <option value="26-50">26-50 personas</option>
+                      <option value="50+">Más de 50</option>
+                    </select>
+                  </div>
                 </div>
                 <div>
-                  <label className="block text-xs text-white/50 uppercase tracking-wider mb-2">Cuéntanos tu situación</label>
+                  <label className="block text-xs text-white/50 uppercase tracking-wider mb-2">Tu principal cuello de botella</label>
                   <textarea
                     rows={4}
-                    placeholder="¿En qué punto está tu empresa? ¿Qué quieres mejorar?"
+                    placeholder="¿Qué proceso te quita más tiempo o te impide escalar? Cuanto más concreto, mejor preparamos la llamada."
                     className="w-full bg-white/5 border border-white/10 text-white placeholder-white/30 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-[#639922]/60 transition-colors resize-none"
                   />
                 </div>
@@ -105,10 +128,10 @@ export default function CTAContacto() {
                   type="submit"
                   className="w-full bg-[#7fc244] text-[#0f1a0a] font-semibold py-4 rounded-xl hover:bg-[#9fd660] transition-colors text-sm tracking-wide"
                 >
-                  Solicitar diagnóstico gratuito
+                  Reservar diagnóstico (30 min, gratis)
                 </button>
                 <p className="text-center text-xs text-white/30">
-                  Respondemos en menos de 24 horas laborables
+                  Respuesta con propuesta de horario en menos de 24 h laborables
                 </p>
               </form>
             )}

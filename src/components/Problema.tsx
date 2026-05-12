@@ -7,9 +7,9 @@ const problemas = [
         <line x1="12" y1="3" x2="12" y2="21" />
       </svg>
     ),
-    titulo: 'Procesos desconectados',
+    titulo: 'Cuatro herramientas, cero verdad común',
     descripcion:
-      'Cada departamento trabaja con sus propias herramientas y formatos. La información no fluye y se pierde tiempo en coordinación manual.',
+      'Cada departamento usa sus propios sistemas y nadie sabe qué dato es el bueno. Las reuniones se van en reconciliar Excel, no en decidir.',
   },
   {
     icon: (
@@ -18,9 +18,9 @@ const problemas = [
         <polyline points="12 6 12 12 16 14" />
       </svg>
     ),
-    titulo: 'Tiempo perdido en tareas repetitivas',
+    titulo: '12-18 horas a la semana en tareas mecánicas',
     descripcion:
-      'Tu equipo dedica horas a copiar datos, enviar emails o rellenar informes que podrían automatizarse en minutos.',
+      'Copiar datos entre herramientas, enviar los mismos emails, rellenar informes. Son ~70.000 €/año de salario haciendo trabajo que un sistema haría en minutos.',
   },
   {
     icon: (
@@ -30,9 +30,9 @@ const problemas = [
         <line x1="6" y1="20" x2="6" y2="14" />
       </svg>
     ),
-    titulo: 'Decisiones sin datos fiables',
+    titulo: 'Decisiones por intuición, no por dato',
     descripcion:
-      'Sin digitalización, no hay visibilidad real. Las decisiones se toman por intuición, no por métricas actualizadas en tiempo real.',
+      'Sin trazabilidad en tiempo real, decides con el dashboard mental del director. Funcionó hasta cierto tamaño. A partir de ahí, es ruleta.',
   },
   {
     icon: (
@@ -40,9 +40,9 @@ const problemas = [
         <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" />
       </svg>
     ),
-    titulo: 'Imposible escalar',
+    titulo: 'Sumas personas, no escala',
     descripcion:
-      'Cuando todo depende de personas haciendo tareas manuales, crecer significa contratar más, no trabajar mejor.',
+      'Cada cliente nuevo cuesta lo mismo en horas-equipo que el anterior. Eso no es crecer: es sumar coste fijo al mismo ritmo que el ingreso.',
   },
 ]
 
@@ -90,9 +90,11 @@ export default function Problema() {
         {/* Closing statement */}
         <FadeIn delay={0.2} className="mt-16 border-l-4 border-[#639922] pl-8 max-w-2xl">
           <p className="text-xl text-[#0f1a0a] font-medium leading-relaxed">
-            "El problema no es la tecnología. El problema es no saber por dónde empezar."
+            Cada trimestre que pospones esto son ~17.000 € en horas-equipo que no recuperarás.
           </p>
-          <p className="text-gray-400 mt-3 text-sm">Por eso existe Geito.</p>
+          <p className="text-gray-400 mt-3 text-sm">
+            El método no es opcional. El momento sí.
+          </p>
         </FadeIn>
       </div>
     </section>
