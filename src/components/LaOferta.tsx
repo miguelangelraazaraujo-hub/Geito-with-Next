@@ -74,12 +74,21 @@ const garantias = [
 export default function LaOferta() {
     return (
         <section className="bg-[#0f1a0a] py-24 lg:py-32 relative overflow-hidden" id="oferta">
-            {/* Soft radial accent (perf: cheaper than a tiled grid + backdrop blur) */}
+            {/* Grid + radial accent combined in a single static layer.
+                Perf: no backdrop-blur consumers above it, pointer-events disabled,
+                and `will-change: transform` promotes it to its own composited layer
+                so the browser caches it as a texture instead of repainting on scroll. */}
             <div
                 className="absolute inset-0 pointer-events-none"
                 style={{
-                    background:
+                    backgroundImage: [
                         'radial-gradient(ellipse 60% 40% at 50% 0%, rgba(127,194,68,0.06), transparent 70%)',
+                        'linear-gradient(rgba(255,255,255,0.04) 1px, transparent 1px)',
+                        'linear-gradient(90deg, rgba(255,255,255,0.04) 1px, transparent 1px)',
+                    ].join(', '),
+                    backgroundSize: '100% 100%, 64px 64px, 64px 64px',
+                    willChange: 'transform',
+                    transform: 'translateZ(0)',
                 }}
             />
 
