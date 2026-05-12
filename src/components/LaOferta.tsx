@@ -74,12 +74,12 @@ const garantias = [
 export default function LaOferta() {
     return (
         <section className="bg-[#0f1a0a] py-24 lg:py-32 relative overflow-hidden" id="oferta">
-            {/* Grid texture */}
+            {/* Soft radial accent (perf: cheaper than a tiled grid + backdrop blur) */}
             <div
-                className="absolute inset-0 opacity-[0.04] pointer-events-none"
+                className="absolute inset-0 pointer-events-none"
                 style={{
-                    backgroundImage: `linear-gradient(#fff 1px, transparent 1px), linear-gradient(90deg, #fff 1px, transparent 1px)`,
-                    backgroundSize: '64px 64px',
+                    background:
+                        'radial-gradient(ellipse 60% 40% at 50% 0%, rgba(127,194,68,0.06), transparent 70%)',
                 }}
             />
 
@@ -105,7 +105,7 @@ export default function LaOferta() {
 
                 {/* Value stack */}
                 <FadeIn>
-                    <div className="bg-white/13 border border-white/10 rounded-3xl p-6 lg:p-10 backdrop-blur-sm">
+                    <div className="bg-[#162b0e] border border-white/10 rounded-3xl p-6 lg:p-10">
                         <FadeInStagger className="divide-y divide-white/10" stagger={0.06}>
                             {incluido.map((item, i) => (
                                 <FadeInItem key={i}>

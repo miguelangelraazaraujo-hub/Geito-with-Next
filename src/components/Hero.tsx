@@ -33,7 +33,9 @@ export default function Hero() {
       })
     }
 
-    let animId: number
+    let animId: number | null = null
+    let visible = true
+
     const draw = () => {
       ctx.clearRect(0, 0, canvas.width, canvas.height)
       particles.forEach((p) => {
@@ -61,8 +63,42 @@ export default function Hero() {
       })
       animId = requestAnimationFrame(draw)
     }
-    draw()
-    return () => cancelAnimationFrame(animId)
+
+    const start = () => {
+      if (animId === null) draw()
+    }
+    const stop = () => {
+      if (animId !== null) {
+        cancelAnimationFrame(animId)
+        animId = null
+      }
+    }
+
+    // Pause when canvas leaves viewport
+    const io = new IntersectionObserver(
+      ([entry]) => {
+        visible = entry.isIntersecting
+        if (visible && !document.hidden) start()
+        else stop()
+      },
+      { threshold: 0 }
+    )
+    io.observe(canvas)
+
+    // Pause when tab loses focus
+    const onVisibility = () => {
+      if (document.hidden) stop()
+      else if (visible) start()
+    }
+    document.addEventListener('visibilitychange', onVisibility)
+
+    start()
+
+    return () => {
+      stop()
+      io.disconnect()
+      document.removeEventListener('visibilitychange', onVisibility)
+    }
   }, [])
 
   return (
