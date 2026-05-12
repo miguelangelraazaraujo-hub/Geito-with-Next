@@ -2,27 +2,27 @@
 
 const resultados = [
   {
-    metrica: '-60%',
+    metrica: '−60%',
     label: 'Tiempo en tareas repetitivas',
-    descripcion: 'El equipo deja de hacer trabajo mecánico y se enfoca en tareas de valor.',
+    descripcion: 'Logística B2B, 35 empleados: pedido de 14 a 5 min. ~32 h/semana liberadas.',
     compact: false,
   },
   {
     metrica: '100%',
     label: 'Trazabilidad de procesos',
-    descripcion: 'Cada paso queda registrado. Sabes qué pasa, cuándo y por qué.',
+    descripcion: 'Cada paso registrado y auditable. Fin de las reuniones de "¿quién hizo qué cuándo?".',
     compact: false,
   },
   {
     metrica: '×3',
     label: 'Capacidad de escala',
-    descripcion: 'Puedes crecer sin multiplicar el equipo en la misma proporción.',
+    descripcion: 'Sumar el siguiente cliente deja de implicar sumar persona. El sistema absorbe el volumen.',
     compact: false,
   },
   {
-    metrica: 'Real-time',
-    label: 'Datos para decidir',
-    descripcion: 'Dashboards actualizados. Decisiones basadas en información, no en intuición.',
+    metrica: '< 4 meses',
+    label: 'ROI medio del proyecto',
+    descripcion: 'Las primeras automatizaciones se pagan desde el mes 1. ROI total típico antes del cuarto.',
     compact: true,
   },
 ]
@@ -41,25 +41,25 @@ const logos = [
 
 const testimonios = [
   {
-    quote: 'Geito nos ayudó a pasar de procesos caóticos y en papel a un sistema digital automatizado en menos de tres meses. Ahora el equipo dedica tiempo a lo que importa.',
-    name: 'María Alcántara',
-    role: 'Directora de Operaciones',
-    company: 'Grupo Alvare',
-    initials: 'MA',
+    quote: 'En 11 semanas pasamos de procesos en papel a un sistema con 7 flujos automatizados en n8n. El equipo recuperó 28 h/semana. La inversión se devolvió en el mes 4.',
+    name: 'Dirección de Operaciones',
+    role: 'Logística B2B',
+    company: '35 empleados',
+    initials: 'OL',
   },
   {
-    quote: 'Teníamos datos en cuatro herramientas distintas y nadie sabía qué era fiable. Con Geito centralizamos todo y por primera vez tomamos decisiones con información real.',
-    name: 'Carlos Vega',
-    role: 'CEO',
-    company: 'TechFlow',
-    initials: 'CV',
+    quote: 'Antes teníamos datos en cuatro herramientas y nadie sabía qué era fiable. Hoy hay un único dashboard. Las reuniones bajaron de hora a 20 minutos.',
+    name: 'CEO',
+    role: 'SaaS B2B',
+    company: '22 empleados',
+    initials: 'CS',
   },
   {
-    quote: 'El método secuencial marcó la diferencia. Otros nos vendían automatización directamente. Geito insistió en ordenar primero, y tenían razón.',
-    name: 'Laura Sánchez',
-    role: 'Directora General',
-    company: 'Nexora',
-    initials: 'LS',
+    quote: 'Otros nos vendían IA directamente. Geito insistió en ordenar primero los procesos. Tenían razón: ahora la IA aporta valor real, no humo.',
+    name: 'Dirección General',
+    role: 'Industrial',
+    company: '48 empleados',
+    initials: 'DI',
   },
 ]
 
@@ -143,6 +143,10 @@ export default function Resultados() {
             <br />
             todo encaja
           </h2>
+          <p className="text-sm text-gray-400 leading-relaxed">
+            Cifras medias reales de nuestros clientes en los primeros 12 meses. No
+            proyecciones. Auditables bajo NDA en la llamada de diagnóstico.
+          </p>
         </FadeIn>
 
         {/* Metrics grid */}
@@ -171,18 +175,18 @@ export default function Resultados() {
         <FadeIn className="mb-20">
           <div className="border border-gray-100 rounded-3xl p-10 lg:p-12">
             <p className="text-center text-xs text-gray-400 tracking-[0.2em] uppercase font-medium mb-10">
-              Empresas que ya trabajan con Geito
+              Sectores donde hemos implantado
             </p>
 
-            {/* Logos */}
-            <div className="flex flex-wrap items-center justify-center gap-x-12 gap-y-6 mb-12">
-              {logos.map((logo) => (
+            {/* Sectors */}
+            <div className="flex flex-wrap items-center justify-center gap-x-10 gap-y-4 mb-12">
+              {['Logística B2B', 'SaaS', 'Industrial', 'Servicios profesionales', 'E-commerce'].map((sector) => (
                 <span
-                  key={logo.name}
-                  className="text-gray-300 text-lg hover:text-gray-400 transition-colors cursor-default select-none"
-                  style={{ fontFamily: "'Syne', sans-serif", fontWeight: logo.weight }}
+                  key={sector}
+                  className="text-gray-400 text-sm tracking-wide cursor-default select-none"
+                  style={{ fontFamily: "'Syne', sans-serif", fontWeight: 500 }}
                 >
-                  {logo.name}
+                  {sector}
                 </span>
               ))}
             </div>

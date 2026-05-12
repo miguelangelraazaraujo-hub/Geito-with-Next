@@ -1,16 +1,17 @@
 const perfiles = [
-  'Empresa con 5 a 100 empleados',
-  'Procesos internos sin documentar o inconsistentes',
-  'Herramientas digitales sin integrar entre sí',
-  'Equipo que dedica horas a tareas repetitivas',
-  'Dirección que quiere crecer sin contratar en proporción',
-  'Interés real en automatización e IA, pero sin saber cómo empezar',
+  'Empresa B2B de 10 a 50 personas facturando entre 1M y 10M €',
+  'Procesos repetibles que ahora se hacen "a mano" o en Excel',
+  'Has invertido antes en herramientas que nadie acabó usando',
+  'Tu equipo dedica 10+ horas a la semana a tareas mecánicas',
+  'Quieres crecer sin duplicar la plantilla en la misma proporción',
+  'Estás dispuesto a invertir entre 9.000 € y 25.000 € en los próximos 90 días',
 ]
 
 const noPerfiles = [
-  'Autónomos sin equipo ni procesos repetibles',
-  'Empresas que buscan solo una herramienta puntual',
-  'Proyectos sin presupuesto mínimo para implementar',
+  'Buscas un chatbot para tu web. Hay SaaS por 30 €/mes que lo hacen',
+  'Quieres "implantar IA" antes de ordenar la operativa. No trabajamos así',
+  'Esperas un PDF de 80 páginas y un consultor que desaparezca. Eso lo hace Big4',
+  'Tu empresa factura menos de 500.000 € al año. Aún necesitas vender más, no automatizar',
 ]
 
 import { FadeIn, FadeInStagger, FadeInItem } from './FadeIn'
@@ -75,14 +76,14 @@ export default function ParaQuienEs() {
             {/* CTA inside */}
             <div className="mt-16 p-8 border border-[#7fc244]/20 rounded-2xl bg-[#7fc244]/5">
               <p className="text-white/80 mb-6 leading-relaxed">
-                ¿No estás seguro de si encajas? El diagnóstico inicial es gratuito y sin compromiso.
-                En una llamada lo sabemos.
+                ¿En la frontera? Una llamada de 30 minutos lo aclara. Si no encajas, te
+                lo decimos en directo y sales con un mini-roadmap. No perdemos tu tiempo.
               </p>
               <a
                 href="#contacto"
                 className="inline-flex items-center gap-2 text-[#7fc244] text-sm font-semibold hover:gap-4 transition-all"
               >
-                Solicitar diagnóstico
+                Reservar diagnóstico (gratis, 30 min)
                 <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
                   <path d="M3 8h10M9 4l4 4-4 4" />
                 </svg>

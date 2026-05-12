@@ -9,10 +9,10 @@ const etapas = [
   {
     numero: '01',
     titulo: 'Procesos',
-    tagline: 'La base de todo',
+    tagline: '2-3 semanas',
     descripcion:
-      'Antes de digitalizar nada, hay que entender cómo trabaja tu empresa. Mapeamos tus procesos clave, identificamos ineficiencias y establecemos una base clara sobre la que construir.',
-    resultado: 'Mapa de procesos documentado y priorizado',
+      'Mapeamos cada flujo crítico de tu empresa. Salimos con la lista de los 5-15 procesos donde la automatización paga su coste en menos de 90 días. En el último cliente identificamos 23 oportunidades en esta fase.',
+    resultado: 'Mapa de procesos firmado y priorizado por ROI',
     color: 'bg-[#0f1a0a]',
     accent: 'text-[#7fc244]',
     border: 'border-[#7fc244]',
@@ -28,10 +28,10 @@ const etapas = [
   {
     numero: '02',
     titulo: 'Digitalización',
-    tagline: 'Del papel al sistema',
+    tagline: '2-4 semanas',
     descripcion:
-      'Trasladamos esos procesos a herramientas digitales adecuadas para tu sector y tamaño. Sin sobredimensionar, sin complejidad innecesaria. Solo lo que tu empresa realmente necesita.',
-    resultado: 'Herramientas digitales operativas y equipo formado',
+      'Implementamos las herramientas mínimas necesarias para que tu equipo trabaje sin papel ni Excel-ping-pong. Sin sobredimensionar: tu pyme no necesita SAP. Solo lo que mueve la aguja en tu sector.',
+    resultado: 'Stack digital operativo y equipo formado',
     color: 'bg-[#f8fdf4]',
     accent: 'text-[#3B6D11]',
     border: 'border-[#639922]',
@@ -46,10 +46,10 @@ const etapas = [
   {
     numero: '03',
     titulo: 'Automatización',
-    tagline: 'Que trabaje solo',
+    tagline: '3-5 semanas',
     descripcion:
-      'Con n8n como núcleo, conectamos tus herramientas y automatizamos los flujos repetitivos. Tu equipo deja de hacer tareas mecánicas y se enfoca en lo que aporta valor real.',
-    resultado: 'Flujos automatizados con n8n en producción',
+      'Conectamos tus sistemas con n8n y dejamos en producción al menos 3 flujos que liberan 8-15 horas/semana al equipo. Garantizado en contrato. Tu gente deja de copiar datos y se dedica a lo que aporta valor real.',
+    resultado: 'Mínimo 3 flujos n8n en producción y midiendo impacto',
     color: 'bg-[#0f1a0a]',
     accent: 'text-[#7fc244]',
     border: 'border-[#7fc244]',
@@ -64,10 +64,10 @@ const etapas = [
   {
     numero: '04',
     titulo: 'Inteligencia Artificial',
-    tagline: 'Inteligencia sobre la base',
+    tagline: '2-4 semanas',
     descripcion:
-      'Con procesos ordenados, digitalizados y automatizados, la IA tiene sentido. La incorporamos donde genera impacto real: análisis predictivo, generación de contenido, asistentes internos o toma de decisiones.',
-    resultado: 'IA integrada en los procesos de negocio',
+      'Solo cuando los datos están limpios y los procesos definidos, la IA tiene sentido. La aplicamos donde mueve la aguja: análisis predictivo, generación de contenido a escala, asistentes internos, soporte a decisiones. Sin IA decorativa.',
+    resultado: 'IA integrada en al menos 2 procesos críticos del negocio',
     color: 'bg-[#f8fdf4]',
     accent: 'text-[#3B6D11]',
     border: 'border-[#639922]',

@@ -189,6 +189,39 @@ export default function LaOferta() {
                                 </p>
                             </div>
                         </div>
+
+                        {/* Internal-team anchor */}
+                        <div className="mt-6 pt-6 border-t border-white/5">
+                            <p className="text-white/40 text-xs leading-relaxed">
+                                <span className="text-white/60">Equivalente con equipo interno:</span> analista
+                                de procesos + dev integrador + AI engineer = 120.000–180.000 €/año en
+                                España. Tú pagas un proyecto cerrado con resultado garantizado.
+                            </p>
+                        </div>
+
+                        {/* What's NOT included */}
+                        <div className="mt-6 pt-6 border-t border-white/5">
+                            <p className="text-white/40 text-xs tracking-[0.2em] uppercase mb-3">
+                                Lo que NO incluye (honestidad)
+                            </p>
+                            <ul className="space-y-2 text-white/50 text-sm leading-relaxed">
+                                <li>· Licencias de software (las contratas tú a tu nombre)</li>
+                                <li>· Comisión sobre tus herramientas (cobramos cero al proveedor)</li>
+                                <li>· Hardware ni infraestructura cloud</li>
+                            </ul>
+                        </div>
+                    </div>
+                </FadeIn>
+
+                {/* Scarcity */}
+                <FadeIn className="mt-8" delay={0.05}>
+                    <div className="flex items-center justify-center gap-3 text-sm">
+                        <span className="w-2 h-2 rounded-full bg-[#7fc244] animate-pulse" />
+                        <p className="text-white/60">
+                            Aceptamos <span className="text-white font-semibold">3 clientes nuevos por trimestre</span>.
+                            <span className="text-white/40"> Es la capacidad real con calidad. </span>
+                            <span className="text-[#7fc244] font-semibold">Plazas disponibles este trimestre: 2.</span>
+                        </p>
                     </div>
                 </FadeIn>
 

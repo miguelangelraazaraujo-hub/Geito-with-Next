@@ -61,25 +61,23 @@ export default function PorQueEsteOrden() {
               className="text-4xl lg:text-5xl font-bold text-[#0f1a0a] mt-4 mb-8 leading-tight"
               style={{ fontFamily: "'Syne', sans-serif" }}
             >
-              La IA sin base
+              Saltarse el orden
               <br />
-              es ruido.
+              cuesta caro.
             </h2>
             <div className="space-y-6 text-gray-500 leading-relaxed">
               <p>
-                Muchas empresas cometen el error de querer implantar inteligencia
-                artificial o automatizaciones sin tener los procesos definidos ni
-                digitalizados. El resultado: sistemas costosos que nadie usa, o peor,
-                que generan más caos del que resuelven.
+                Las agencias venden IA primero porque <span className="text-[#0f1a0a] font-medium">suena bien y vende caro</span>.
+                El problema: la IA sin datos limpios es alucinación garantizada. La
+                automatización sin procesos ordenados es caos automatizado. Y los procesos
+                sin documentar son una bomba de relojería cuando se va el primer empleado clave.
               </p>
               <p>
-                Cada etapa de Geito tiene un propósito concreto. Los procesos le dan
-                estructura a la digitalización. La digitalización le da datos a la
-                automatización. Y la automatización le da escala a la inteligencia
-                artificial.
+                Nosotros invertimos el orden. Primero entendemos. Luego digitalizamos.
+                Después automatizamos. Y solo entonces, IA. Es más lento de vender.
               </p>
               <p className="text-[#0f1a0a] font-medium">
-                No hay atajos. Pero sí hay un camino claro.
+                Es lo único que funciona.
               </p>
             </div>
           </FadeIn>

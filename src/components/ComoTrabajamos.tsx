@@ -2,30 +2,30 @@ const fases = [
   {
     numero: '1',
     titulo: 'Diagnóstico',
-    duracion: '1 semana',
+    duracion: '5 días hábiles',
     descripcion:
-      'Analizamos tu empresa: procesos actuales, herramientas, equipo y objetivos. Sin compromiso, sin coste.',
+      'Analizamos tu operativa, herramientas y objetivos. Sin coste, sin obligación. Sales con un roadmap ejecutable aunque no trabajes con nosotros.',
   },
   {
     numero: '2',
     titulo: 'Propuesta',
-    duracion: '3-5 días',
+    duracion: '3 días',
     descripcion:
-      'Diseñamos un plan de transformación personalizado, con etapas, plazos y presupuesto detallado.',
+      'Plan secuencial con etapas, plazos y presupuesto cerrado, no estimado. Cero sorpresas posteriores en facturación.',
   },
   {
     numero: '3',
     titulo: 'Implementación',
-    duracion: 'Según alcance',
+    duracion: '6-12 semanas',
     descripcion:
-      'Ejecutamos cada etapa con tu equipo, asegurándonos de que todo queda bien documentado y adoptado.',
+      'Ejecutamos con tu equipo, no en su lugar. Hitos revisables cada 2 semanas. Tú decides si continuamos al siguiente.',
   },
   {
     numero: '4',
     titulo: 'Seguimiento',
-    duracion: 'Continuo',
+    duracion: '90 días incluidos',
     descripcion:
-      'No desaparecemos. Monitorizamos, ajustamos y seguimos mejorando los sistemas contigo.',
+      'No desaparecemos al firmar la entrega. Ajustamos y optimizamos sin coste adicional. Después, retainer opcional. Sin permanencia.',
   },
 ]
 

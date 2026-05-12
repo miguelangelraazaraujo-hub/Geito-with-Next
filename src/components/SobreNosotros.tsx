@@ -47,18 +47,20 @@ export default function SobreNosotros() {
             </h2>
             <div className="space-y-6 text-gray-500 leading-relaxed">
               <p>
-                Geito nace de la experiencia directa con empresas que han intentado
-                digitalizar sin método. Hemos visto cómo proyectos de automatización
-                fallan porque no había procesos definidos, y cómo inversiones en IA se
-                pierden porque los datos no estaban estructurados.
+                Geito nace después de ver durante años cómo empresas medianas gastaban
+                entre 30.000 € y 100.000 € en herramientas digitales que terminaban sin
+                usarse. No porque las herramientas fueran malas — porque nadie había
+                ordenado los procesos antes de implantarlas.
               </p>
               <p>
-                Por eso construimos un método secuencial y sin atajos. Trabajamos como
-                parte del equipo, no como consultores externos que entregan un documento
-                y desaparecen.
+                La paradoja: cuanto más invertían en tecnología, más caótica era la
+                operativa. Decidimos construir Geito para resolver exactamente eso, en
+                el orden correcto.
               </p>
               <p className="text-[#0f1a0a] font-medium">
-                Nuestro éxito se mide por el tuyo.
+                No somos consultores con un curso de IA. Somos operadores que han
+                fallado con su propio dinero y aprendido. Por eso vendemos método antes
+                que herramienta.
               </p>
             </div>
           </FadeIn>

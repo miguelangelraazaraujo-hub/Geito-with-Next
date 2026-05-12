@@ -26,8 +26,16 @@ export default function Footer() {
             style={{ filter: 'invert(1)' }}
           />
           <p className="text-white/40 text-sm leading-relaxed max-w-xs">
-            Transformación digital B2B. Ayudamos a empresas a ordenar, digitalizar y automatizar sus procesos.
+            Transformación digital B2B. Ordenamos, digitalizamos y automatizamos
+            procesos de empresas de 10-50 personas.
           </p>
+          <div className="inline-flex items-center gap-2 text-[#7fc244]/80 text-xs">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+              <path d="M12 2l8 4v6c0 5-3.5 9-8 10-4.5-1-8-5-8-10V6l8-4z" />
+              <polyline points="9 12 11 14 15 10" />
+            </svg>
+            <span>Sistema Geito 90 · ROI en 6 meses o devolvemos la diferencia</span>
+          </div>
           {/* LinkedIn */}
           <a
             href="https://linkedin.com/company/geito"
