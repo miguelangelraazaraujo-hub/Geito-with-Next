@@ -205,7 +205,7 @@ export default function Resultados() {
               >
                 El objetivo no es tener tecnología.
                 <br />
-                <span className="text-[#c7d2fe]">Es que funcione para ti.</span>
+                <span className="text-gradient-animated">Es que funcione para ti.</span>
               </h3>
               <p className="text-white/60 leading-relaxed">
                 Cada implementación de Geito está medida por impacto en el negocio,

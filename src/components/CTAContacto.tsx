@@ -1,6 +1,7 @@
 'use client'
 
 import { useState } from 'react'
+import { motion } from 'motion/react'
 
 export default function CTAContacto() {
   const [enviado, setEnviado] = useState(false)
@@ -25,7 +26,7 @@ export default function CTAContacto() {
             >
               30 minutos.
               <br />
-              <span className="text-[#c7d2fe]">Cero PowerPoint.</span>
+              <span className="text-gradient-animated">Cero PowerPoint.</span>
             </h2>
             <p className="text-white/60 leading-relaxed mb-6 max-w-md">
               Tú me cuentas tu operativa actual. Yo te digo si podemos ayudarte —
@@ -46,8 +47,17 @@ export default function CTAContacto() {
                 'Plazas limitadas: 3 nuevos clientes este trimestre',
               ].map((item, i) => (
                 <div key={i} className="flex items-center gap-3">
-                  <svg width="18" height="18" viewBox="0 0 18 18" fill="none" stroke="#c7d2fe" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-                    <polyline points="3 9 7 13 15 5" />
+                  <svg
+                    width="18" height="18" viewBox="0 0 18 18" fill="none"
+                    stroke="#c7d2fe" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"
+                  >
+                    <motion.polyline
+                      points="3 9 7 13 15 5"
+                      initial={{ pathLength: 0 }}
+                      whileInView={{ pathLength: 1 }}
+                      viewport={{ once: true, amount: 0.8 }}
+                      transition={{ duration: 0.5, delay: i * 0.35, ease: 'easeOut' }}
+                    />
                   </svg>
                   <span className="text-white/70 text-sm">{item}</span>
                 </div>

@@ -200,7 +200,7 @@ export default function Hero() {
 
               {/* Línea animada sobre la de fondo */}
               <motion.div
-                className="absolute left-[27px] top-8 w-px bg-gradient-to-b from-[#c7d2fe] to-[#c7d2fe]/20 origin-top"
+                className="absolute left-[27px] top-8 w-px bg-linear-to-b from-[#c7d2fe] to-[#c7d2fe]/20 origin-top"
                 initial={{ scaleY: 0 }}
                 animate={{ scaleY: 1 }}
                 transition={{ duration: 1.4, delay: 0.6, ease: [0.25, 0.1, 0.25, 1] }}
@@ -264,7 +264,7 @@ export default function Hero() {
       {/* Scroll indicator */}
       <div className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-white/30">
         <span className="text-xs tracking-widest uppercase">Scroll</span>
-        <div className="w-px h-8 bg-gradient-to-b from-white/30 to-transparent" />
+        <div className="w-px h-8 bg-linear-to-b from-white/30 to-transparent" />
       </div>
     </section>
   )
