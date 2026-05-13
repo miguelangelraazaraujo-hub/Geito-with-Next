@@ -22,7 +22,7 @@ export default function Navbar() {
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled ? 'bg-[#0f1a0a]/95 backdrop-blur-md border-b border-white/5' : ''
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled ? 'bg-[#254ba1]/95 backdrop-blur-md border-b border-white/5' : ''
         }`}
     >
       <nav className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
@@ -33,7 +33,7 @@ export default function Navbar() {
             src="/Geito-logo.jpeg"
             alt="Geito"
             className="h-9 w-auto rounded-lg"
-            style={{ filter: 'invert(1)' }}
+            style={{  }}
           />
         </a>
 
@@ -53,7 +53,7 @@ export default function Navbar() {
         {/* CTA */}
         <a
           href="#contacto"
-          className="hidden lg:inline-flex items-center gap-2 bg-[#7fc244] text-[#0f1a0a] font-semibold px-5 py-2.5 rounded-full hover:bg-[#9fd660] transition-colors text-sm whitespace-nowrap"
+          className="hidden lg:inline-flex items-center gap-2 bg-[#c7d2fe] text-[#1e293b] font-semibold px-5 py-2.5 rounded-full hover:bg-[#818cf8] transition-colors text-sm whitespace-nowrap"
         >
           Diagnóstico gratuito
         </a>
@@ -82,7 +82,7 @@ export default function Navbar() {
 
       {/* Mobile menu */}
       {open && (
-        <div className="lg:hidden bg-[#0f1a0a] border-t border-white/5 px-6 py-6 space-y-4">
+        <div className="lg:hidden bg-[#0f172a] border-t border-white/5 px-6 py-6 space-y-4">
           {links.map((l) => (
             <a
               key={l.href}
@@ -96,7 +96,7 @@ export default function Navbar() {
           <a
             href="#contacto"
             onClick={() => setOpen(false)}
-            className="block mt-4 text-center bg-[#7fc244] text-[#0f1a0a] font-semibold px-5 py-3 rounded-full text-sm"
+            className="block mt-4 text-center bg-[#c7d2fe] text-[#1e293b] font-semibold px-5 py-3 rounded-full text-sm"
           >
             Diagnóstico gratuito
           </a>

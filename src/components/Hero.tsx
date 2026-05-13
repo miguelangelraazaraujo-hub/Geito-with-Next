@@ -45,7 +45,7 @@ export default function Hero() {
         if (p.y < 0 || p.y > canvas.height) p.vy *= -1
         ctx.beginPath()
         ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2)
-        ctx.fillStyle = 'rgba(99, 153, 34, 0.25)'
+        ctx.fillStyle = 'rgba(199, 210, 254, 0.65)'
         ctx.fill()
       })
       particles.forEach((a, i) => {
@@ -55,8 +55,8 @@ export default function Hero() {
             ctx.beginPath()
             ctx.moveTo(a.x, a.y)
             ctx.lineTo(b.x, b.y)
-            ctx.strokeStyle = `rgba(99, 153, 34, ${0.12 * (1 - dist / 120)})`
-            ctx.lineWidth = 0.5
+            ctx.strokeStyle = `rgba(199, 210, 254, ${0.4 * (1 - dist / 120)})`
+            ctx.lineWidth = 0.8
             ctx.stroke()
           }
         })
@@ -102,7 +102,7 @@ export default function Hero() {
   }, [])
 
   return (
-    <section className="relative min-h-screen flex items-center overflow-hidden bg-[#0f1a0a]">
+    <section className="relative min-h-screen flex items-center overflow-hidden bg-[#254ba1]">
       <canvas
         ref={canvasRef}
         className="absolute inset-0 w-full h-full opacity-60"
@@ -126,8 +126,8 @@ export default function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, ease: [0.25, 0.1, 0.25, 1] }}
           >
-            <span className="inline-flex items-center gap-2 text-[#7fc244] text-xs tracking-[0.2em] uppercase font-medium mb-8 border border-[#7fc244]/30 px-3 py-1 rounded-full">
-              <span className="w-1.5 h-1.5 rounded-full bg-[#7fc244] animate-pulse" />
+            <span className="inline-flex items-center gap-2 text-[#c7d2fe] text-xs tracking-[0.2em] uppercase font-medium mb-8 border border-[#c7d2fe]/30 px-3 py-1 rounded-full">
+              <span className="w-1.5 h-1.5 rounded-full bg-[#c7d2fe] animate-pulse" />
               Transformación digital B2B
             </span>
 
@@ -137,15 +137,15 @@ export default function Hero() {
             >
               Tu empresa
               <br />
-              <span className="text-[#7fc244]">funcionando sola.</span>
+              <span className="text-[#c7d2fe]">funcionando sola.</span>
               <br />
               En 90 días.
             </h1>
 
             <p className="text-lg text-white/60 max-w-xl mb-8 leading-relaxed">
-              Implantamos procesos, herramientas digitales y automatizaciones con n8n e
-              inteligencia artificial. Método secuencial para empresas B2B de 10 a 50
-              personas. Con compromiso de plazos y resultados.
+              Implantamos procesos, herramientas digitales, automatizaciones e
+              inteligencia artificial. Método secuencial para empresas B2B. Con
+              compromiso de plazos y resultados.
             </p>
 
             {/* Numerical proof bullets */}
@@ -157,7 +157,7 @@ export default function Hero() {
               ].map((b) => (
                 <div key={b.label} className="flex items-baseline gap-2">
                   <span
-                    className="text-[#7fc244] font-bold text-lg"
+                    className="text-[#f59e0b] font-bold text-lg"
                     style={{ fontFamily: "'Syne', sans-serif" }}
                   >
                     {b.metric}
@@ -170,7 +170,7 @@ export default function Hero() {
             <div className="flex flex-col sm:flex-row gap-4">
               <a
                 href="#contacto"
-                className="inline-flex items-center justify-center gap-2 bg-[#7fc244] text-[#0f1a0a] font-semibold px-8 py-4 rounded-full hover:bg-[#9fd660] transition-colors text-sm tracking-wide"
+                className="inline-flex items-center justify-center gap-2 bg-[#c7d2fe] text-[#1e293b] font-semibold px-8 py-4 rounded-full hover:bg-[#818cf8] transition-colors text-sm tracking-wide"
               >
                 Reserva tu diagnóstico gratuito
                 <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
@@ -200,7 +200,7 @@ export default function Hero() {
 
               {/* Línea animada sobre la de fondo */}
               <motion.div
-                className="absolute left-[27px] top-8 w-px bg-gradient-to-b from-[#7fc244] to-[#7fc244]/20 origin-top"
+                className="absolute left-[27px] top-8 w-px bg-gradient-to-b from-[#c7d2fe] to-[#c7d2fe]/20 origin-top"
                 initial={{ scaleY: 0 }}
                 animate={{ scaleY: 1 }}
                 transition={{ duration: 1.4, delay: 0.6, ease: [0.25, 0.1, 0.25, 1] }}
@@ -216,15 +216,15 @@ export default function Hero() {
                   transition={{ duration: 0.5, delay: 0.4 + i * 0.15, ease: [0.25, 0.1, 0.25, 1] }}
                 >
                   {/* Nodo */}
-                  <div className="relative z-10 shrink-0 w-14 h-14 rounded-full border-2 border-[#7fc244]/40 bg-[#0f1a0a] flex items-center justify-center">
+                  <div className="relative z-10 shrink-0 w-14 h-14 rounded-full border-2 border-[#c7d2fe]/40 bg-[#1e3a8a] flex items-center justify-center">
                     <motion.div
-                      className="w-10 h-10 rounded-full bg-[#7fc244]/10 flex items-center justify-center"
+                      className="w-10 h-10 rounded-full bg-[#c7d2fe]/10 flex items-center justify-center"
                       initial={{ scale: 0 }}
                       animate={{ scale: 1 }}
                       transition={{ duration: 0.4, delay: 0.5 + i * 0.15, ease: 'backOut' }}
                     >
                       <span
-                        className="text-[#7fc244] font-bold text-xs"
+                        className="text-[#c7d2fe] font-bold text-xs"
                         style={{ fontFamily: "'Syne', sans-serif" }}
                       >
                         {e.num}
@@ -233,7 +233,7 @@ export default function Hero() {
                   </div>
 
                   {/* Card */}
-                  <div className="flex-1 bg-white/5 border border-white/10 rounded-2xl px-5 py-4 hover:bg-white/8 hover:border-[#7fc244]/30 transition-all duration-300">
+                  <div className="flex-1 bg-white/5 border border-white/10 rounded-2xl px-5 py-4 hover:bg-white/8 hover:border-[#c7d2fe]/30 transition-all duration-300">
                     <p
                       className="text-white font-semibold text-sm mb-0.5"
                       style={{ fontFamily: "'Syne', sans-serif" }}
@@ -247,12 +247,12 @@ export default function Hero() {
 
               {/* Badge final */}
               <motion.div
-                className="mt-4 ml-[74px] inline-flex items-center gap-2 text-[#7fc244] text-xs font-medium"
+                className="mt-4 ml-[74px] inline-flex items-center gap-2 text-[#c7d2fe] text-xs font-medium"
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ duration: 0.5, delay: 1.4 }}
               >
-                <div className="w-1.5 h-1.5 rounded-full bg-[#7fc244] animate-pulse" />
+                <div className="w-1.5 h-1.5 rounded-full bg-[#c7d2fe] animate-pulse" />
                 Sistema funcionando y escalable
               </motion.div>
             </div>

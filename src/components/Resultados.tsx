@@ -33,15 +33,15 @@ import { FadeIn, FadeInStagger, FadeInItem } from './FadeIn'
 
 const logos = [
   { name: 'Grupo Alvare', weight: '700' },
-  { name: 'TechFlow',     weight: '400' },
-  { name: 'Nexora',       weight: '600' },
-  { name: 'BrandCore',    weight: '700' },
-  { name: 'Operativa',    weight: '400' },
+  { name: 'TechFlow', weight: '400' },
+  { name: 'Nexora', weight: '600' },
+  { name: 'BrandCore', weight: '700' },
+  { name: 'Operativa', weight: '400' },
 ]
 
 const testimonios = [
   {
-    quote: 'En 11 semanas pasamos de procesos en papel a un sistema con 7 flujos automatizados en n8n. El equipo recuperó 28 h/semana. La inversión se devolvió en el mes 4.',
+    quote: 'En 11 semanas pasamos de procesos en papel a un sistema con 7 flujos automatizados. El equipo recuperó 28 h/semana. La inversión se devolvió en el mes 4.',
     name: 'Dirección de Operaciones',
     role: 'Logística B2B',
     company: '35 empleados',
@@ -75,8 +75,8 @@ function TestimonialCarousel() {
 
   return (
     <div className="max-w-2xl mx-auto text-center">
-      <svg className="mx-auto mb-5 text-[#7fc244]/40" width="32" height="24" viewBox="0 0 32 24" fill="currentColor">
-        <path d="M0 24V14.4C0 6.4 4.8 1.6 14.4 0l1.6 2.8C10.4 4 7.6 7.2 7.2 12H13V24H0zm19 0V14.4C19 6.4 23.8 1.6 33.4 0L35 2.8C29.4 4 26.6 7.2 26.2 12H32V24H19z" transform="scale(0.9)"/>
+      <svg className="mx-auto mb-5 text-[#c7d2fe]/40" width="32" height="24" viewBox="0 0 32 24" fill="currentColor">
+        <path d="M0 24V14.4C0 6.4 4.8 1.6 14.4 0l1.6 2.8C10.4 4 7.6 7.2 7.2 12H13V24H0zm19 0V14.4C19 6.4 23.8 1.6 33.4 0L35 2.8C29.4 4 26.6 7.2 26.2 12H32V24H19z" transform="scale(0.9)" />
       </svg>
 
       <div className="relative overflow-hidden min-h-[140px]">
@@ -93,13 +93,13 @@ function TestimonialCarousel() {
             </p>
             <div className="flex items-center justify-center gap-3">
               <div
-                className="w-9 h-9 rounded-full bg-[#f5f5f0] border border-gray-200 flex items-center justify-center text-xs font-bold text-[#639922]"
+                className="w-9 h-9 rounded-full bg-[#eef2ff] border border-gray-200 flex items-center justify-center text-xs font-bold text-[#4f46e5]"
                 style={{ fontFamily: "'Syne', sans-serif" }}
               >
                 {testimonios[current].initials}
               </div>
               <div className="text-left">
-                <p className="text-sm font-semibold text-[#0f1a0a]">{testimonios[current].name}</p>
+                <p className="text-sm font-semibold text-[#1e293b]">{testimonios[current].name}</p>
                 <p className="text-xs text-gray-400">{testimonios[current].role} · {testimonios[current].company}</p>
               </div>
             </div>
@@ -113,11 +113,10 @@ function TestimonialCarousel() {
           <button
             key={i}
             onClick={() => setCurrent(i)}
-            className={`rounded-full transition-all duration-300 ${
-              i === current
-                ? 'w-5 h-1.5 bg-[#639922]'
+            className={`rounded-full transition-all duration-300 ${i === current
+                ? 'w-5 h-1.5 bg-[#f59e0b]'
                 : 'w-1.5 h-1.5 bg-gray-300 hover:bg-gray-400'
-            }`}
+              }`}
             aria-label={`Testimonio ${i + 1}`}
           />
         ))}
@@ -132,11 +131,11 @@ export default function Resultados() {
       <div className="max-w-6xl mx-auto px-6">
         {/* Header */}
         <FadeIn className="max-w-2xl mb-16">
-          <span className="text-[#639922] text-xs tracking-[0.2em] uppercase font-medium">
+          <span className="text-[#4f46e5] text-xs tracking-[0.2em] uppercase font-medium">
             Resultados
           </span>
           <h2
-            className="text-4xl lg:text-5xl font-bold text-[#0f1a0a] mt-4 mb-6 leading-tight"
+            className="text-4xl lg:text-5xl font-bold text-[#1e293b] mt-4 mb-6 leading-tight"
             style={{ fontFamily: "'Syne', sans-serif" }}
           >
             Lo que cambia cuando
@@ -153,20 +152,20 @@ export default function Resultados() {
         <FadeInStagger className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-20" stagger={0.1}>
           {resultados.map((r, i) => (
             <FadeInItem key={i}>
-            <div className="group p-8 bg-[#f5f5f0] rounded-2xl hover:bg-[#0f1a0a] transition-all duration-300 h-full">
-              <p
-                className={`font-bold text-[#639922] mb-3 group-hover:text-[#7fc244] whitespace-nowrap ${r.compact ? 'text-3xl' : 'text-4xl'}`}
-                style={{ fontFamily: "'Syne', sans-serif" }}
-              >
-                {r.metrica}
-              </p>
-              <p className="text-sm font-semibold text-[#0f1a0a] mb-2 group-hover:text-white">
-                {r.label}
-              </p>
-              <p className="text-xs text-gray-400 leading-relaxed group-hover:text-white/50">
-                {r.descripcion}
-              </p>
-            </div>
+              <div className="group p-8 bg-[#eef2ff] rounded-2xl hover:bg-[#254ba1] transition-all duration-300 h-full">
+                <p
+                  className={`font-bold text-[#f59e0b] mb-3 group-hover:text-[#fbbf24] whitespace-nowrap ${r.compact ? 'text-3xl' : 'text-4xl'}`}
+                  style={{ fontFamily: "'Syne', sans-serif" }}
+                >
+                  {r.metrica}
+                </p>
+                <p className="text-sm font-semibold text-[#1e293b] mb-2 group-hover:text-white">
+                  {r.label}
+                </p>
+                <p className="text-xs text-gray-400 leading-relaxed group-hover:text-white/50">
+                  {r.descripcion}
+                </p>
+              </div>
             </FadeInItem>
           ))}
         </FadeInStagger>
@@ -198,31 +197,31 @@ export default function Resultados() {
 
         {/* Bottom statement */}
         <FadeIn delay={0.1}>
-        <div className="bg-[#0f1a0a] rounded-3xl p-10 lg:p-14 flex flex-col lg:flex-row items-center justify-between gap-8">
-          <div className="max-w-lg">
-            <h3
-              className="text-3xl font-bold text-white mb-4"
-              style={{ fontFamily: "'Syne', sans-serif" }}
+          <div className="bg-[#254ba1] rounded-3xl p-10 lg:p-14 flex flex-col lg:flex-row items-center justify-between gap-8">
+            <div className="max-w-lg">
+              <h3
+                className="text-3xl font-bold text-white mb-4"
+                style={{ fontFamily: "'Syne', sans-serif" }}
+              >
+                El objetivo no es tener tecnología.
+                <br />
+                <span className="text-[#c7d2fe]">Es que funcione para ti.</span>
+              </h3>
+              <p className="text-white/60 leading-relaxed">
+                Cada implementación de Geito está medida por impacto en el negocio,
+                no por número de herramientas instaladas.
+              </p>
+            </div>
+            <a
+              href="#contacto"
+              className="shrink-0 inline-flex items-center gap-2 bg-[#c7d2fe] text-[#1e293b] font-semibold px-8 py-4 rounded-full hover:bg-[#818cf8] transition-colors text-sm"
             >
-              El objetivo no es tener tecnología.
-              <br />
-              <span className="text-[#7fc244]">Es que funcione para ti.</span>
-            </h3>
-            <p className="text-white/60 leading-relaxed">
-              Cada implementación de Geito está medida por impacto en el negocio,
-              no por número de herramientas instaladas.
-            </p>
+              Empezar ahora
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+                <path d="M3 8h10M9 4l4 4-4 4" />
+              </svg>
+            </a>
           </div>
-          <a
-            href="#contacto"
-            className="shrink-0 inline-flex items-center gap-2 bg-[#7fc244] text-[#0f1a0a] font-semibold px-8 py-4 rounded-full hover:bg-[#9fd660] transition-colors text-sm"
-          >
-            Empezar ahora
-            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-              <path d="M3 8h10M9 4l4 4-4 4" />
-            </svg>
-          </a>
-        </div>
         </FadeIn>
       </div>
     </section>

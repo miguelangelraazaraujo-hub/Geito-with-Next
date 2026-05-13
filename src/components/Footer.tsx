@@ -13,7 +13,7 @@ const legalLinks = [
 
 export default function Footer() {
   return (
-    <footer className="bg-[#0a1208] border-t border-white/5">
+    <footer className="bg-[#254ba1] border-t border-white/10">
       {/* Main footer */}
       <div className="max-w-6xl mx-auto px-6 py-14 grid grid-cols-1 md:grid-cols-3 gap-10">
         {/* Brand */}
@@ -23,13 +23,13 @@ export default function Footer() {
             src="/Geito-logo-lg.png"
             alt="Geito"
             className="block h-10 w-fit rounded-lg"
-            style={{ filter: 'invert(1)' }}
+            style={{  }}
           />
           <p className="text-white/40 text-sm leading-relaxed max-w-xs">
             Transformación digital B2B. Ordenamos, digitalizamos y automatizamos
             procesos de empresas de 10-50 personas.
           </p>
-          <div className="inline-flex items-center gap-2 text-[#7fc244]/80 text-xs">
+          <div className="inline-flex items-center gap-2 text-[#c7d2fe]/80 text-xs">
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
               <path d="M12 2l8 4v6c0 5-3.5 9-8 10-4.5-1-8-5-8-10V6l8-4z" />
               <polyline points="9 12 11 14 15 10" />
@@ -76,7 +76,7 @@ export default function Footer() {
           <div className="mt-8">
             <a
               href="#contacto"
-              className="inline-flex items-center gap-2 bg-[#7fc244] text-[#0f1a0a] font-semibold px-5 py-2.5 rounded-full hover:bg-[#9fd660] transition-colors text-sm"
+              className="inline-flex items-center gap-2 bg-[#c7d2fe] text-[#1e293b] font-semibold px-5 py-2.5 rounded-full hover:bg-[#818cf8] transition-colors text-sm"
             >
               Solicitar diagnóstico
             </a>

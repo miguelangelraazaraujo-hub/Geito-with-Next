@@ -17,7 +17,7 @@ const inter = Inter({
 export const metadata: Metadata = {
   title: 'Geito — Transformación digital B2B',
   description:
-    'Ayudamos a empresas a transformar sus procesos en sistemas digitales automatizados con n8n e inteligencia artificial. Paso a paso, sin saltar etapas.',
+    'Ayudamos a empresas a transformar sus procesos en sistemas digitales automatizados e inteligencia artificial. Paso a paso, sin saltar etapas.',
 }
 
 export default function RootLayout({

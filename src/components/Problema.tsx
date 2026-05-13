@@ -1,4 +1,4 @@
-const problemas = [
+﻿const problemas = [
   {
     icon: (
       <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
@@ -54,11 +54,11 @@ export default function Problema() {
       <div className="max-w-6xl mx-auto px-6">
         {/* Header */}
         <FadeIn className="max-w-2xl mb-16">
-          <span className="text-[#639922] text-xs tracking-[0.2em] uppercase font-medium">
+          <span className="text-[#4f46e5] text-xs tracking-[0.2em] uppercase font-medium">
             El problema
           </span>
           <h2
-            className="text-4xl lg:text-5xl font-bold text-[#0f1a0a] mt-4 mb-6 leading-tight"
+            className="text-4xl lg:text-5xl font-bold text-[#1e293b] mt-4 mb-6 leading-tight"
             style={{ fontFamily: "'Syne', sans-serif" }}
           >
             ¿Te suena familiar?
@@ -73,10 +73,10 @@ export default function Problema() {
         <FadeInStagger className="grid grid-cols-1 md:grid-cols-2 gap-6" stagger={0.1}>
           {problemas.map((p, i) => (
             <FadeInItem key={i}>
-              <div className="group p-8 border border-gray-100 rounded-2xl hover:border-[#639922]/40 hover:bg-[#f8fdf4] transition-all duration-300 h-full">
-                <div className="text-[#639922] mb-5">{p.icon}</div>
+              <div className="group p-8 border border-gray-100 rounded-2xl hover:border-[#4f46e5]/40 hover:bg-[#eef2ff] transition-all duration-300 h-full">
+                <div className="text-[#4f46e5] mb-5">{p.icon}</div>
                 <h3
-                  className="text-xl font-semibold text-[#0f1a0a] mb-3"
+                  className="text-xl font-semibold text-[#1e293b] mb-3"
                   style={{ fontFamily: "'Syne', sans-serif" }}
                 >
                   {p.titulo}
@@ -88,8 +88,8 @@ export default function Problema() {
         </FadeInStagger>
 
         {/* Closing statement */}
-        <FadeIn delay={0.2} className="mt-16 border-l-4 border-[#639922] pl-8 max-w-2xl">
-          <p className="text-xl text-[#0f1a0a] font-medium leading-relaxed">
+        <FadeIn delay={0.2} className="mt-16 border-l-4 border-[#4f46e5] pl-8 max-w-2xl">
+          <p className="text-xl text-[#1e293b] font-medium leading-relaxed">
             Cada trimestre que pospones esto son ~17.000 € en horas-equipo que no recuperarás.
           </p>
           <p className="text-gray-400 mt-3 text-sm">

@@ -1,4 +1,4 @@
-import { FadeIn, FadeInStagger, FadeInItem } from './FadeIn'
+﻿import { FadeIn, FadeInStagger, FadeInItem } from './FadeIn'
 
 export default function PorQueEsteOrden() {
   return (
@@ -18,13 +18,13 @@ export default function PorQueEsteOrden() {
                 <div
                   className={`flex items-center gap-4 p-5 rounded-xl border ${
                     item.ok
-                      ? 'bg-[#f8fdf4] border-[#639922]/40'
+                      ? 'bg-[#eef2ff] border-[#4f46e5]/40'
                       : 'bg-gray-50 border-gray-100'
                   }`}
                 >
                   <div
                     className={`w-8 h-8 rounded-full flex items-center justify-center shrink-0 ${
-                      item.ok ? 'bg-[#639922]' : 'bg-gray-200'
+                      item.ok ? 'bg-[#4f46e5]' : 'bg-gray-200'
                     }`}
                   >
                     {item.ok ? (
@@ -39,10 +39,10 @@ export default function PorQueEsteOrden() {
                     )}
                   </div>
                   <div>
-                    <p className={`font-semibold text-sm ${item.ok ? 'text-[#0f1a0a]' : 'text-gray-400'}`}>
+                    <p className={`font-semibold text-sm ${item.ok ? 'text-[#1e293b]' : 'text-gray-400'}`}>
                       {item.label}
                     </p>
-                    <p className={`text-xs mt-0.5 ${item.ok ? 'text-[#3B6D11]' : 'text-gray-400'}`}>
+                    <p className={`text-xs mt-0.5 ${item.ok ? 'text-[#4f46e5]' : 'text-gray-400'}`}>
                       {item.sub}
                     </p>
                   </div>
@@ -54,11 +54,11 @@ export default function PorQueEsteOrden() {
 
           {/* Right: copy */}
           <FadeIn direction="right" delay={0.1}>
-            <span className="text-[#639922] text-xs tracking-[0.2em] uppercase font-medium">
+            <span className="text-[#4f46e5] text-xs tracking-[0.2em] uppercase font-medium">
               Por qué este orden importa
             </span>
             <h2
-              className="text-4xl lg:text-5xl font-bold text-[#0f1a0a] mt-4 mb-8 leading-tight"
+              className="text-4xl lg:text-5xl font-bold text-[#1e293b] mt-4 mb-8 leading-tight"
               style={{ fontFamily: "'Syne', sans-serif" }}
             >
               Saltarse el orden
@@ -67,7 +67,7 @@ export default function PorQueEsteOrden() {
             </h2>
             <div className="space-y-6 text-gray-500 leading-relaxed">
               <p>
-                Las agencias venden IA primero porque <span className="text-[#0f1a0a] font-medium">suena bien y vende caro</span>.
+                Las agencias venden IA primero porque <span className="text-[#1e293b] font-medium">suena bien y vende caro</span>.
                 El problema: la IA sin datos limpios es alucinación garantizada. La
                 automatización sin procesos ordenados es caos automatizado. Y los procesos
                 sin documentar son una bomba de relojería cuando se va el primer empleado clave.
@@ -76,7 +76,7 @@ export default function PorQueEsteOrden() {
                 Nosotros invertimos el orden. Primero entendemos. Luego digitalizamos.
                 Después automatizamos. Y solo entonces, IA. Es más lento de vender.
               </p>
-              <p className="text-[#0f1a0a] font-medium">
+              <p className="text-[#1e293b] font-medium">
                 Es lo único que funciona.
               </p>
             </div>
