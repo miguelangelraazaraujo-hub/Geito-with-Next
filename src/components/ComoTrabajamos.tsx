@@ -1,3 +1,5 @@
+'use client'
+
 const fases = [
   {
     numero: '1',
@@ -29,6 +31,7 @@ const fases = [
   },
 ]
 
+import { motion } from 'motion/react'
 import { FadeIn, FadeInStagger, FadeInItem } from './FadeIn'
 
 export default function ComoTrabajamos() {
@@ -53,8 +56,18 @@ export default function ComoTrabajamos() {
 
         {/* Timeline */}
         <div className="relative">
-          {/* Connector line */}
-          <div className="hidden lg:block absolute left-[27px] top-10 bottom-10 w-px bg-[#4f46e5]/20" />
+          {/* Línea estática de fondo */}
+          <div className="hidden lg:block absolute left-[27px] top-10 bottom-10 w-px bg-[#4f46e5]/10" />
+
+          {/* Línea animada encima */}
+          <motion.div
+            className="hidden lg:block absolute left-[27px] top-10 w-px bg-gradient-to-b from-[#254ba1] via-[#c7d2fe] to-[#c7d2fe]/20 origin-top"
+            style={{ bottom: 40 }}
+            initial={{ scaleY: 0 }}
+            whileInView={{ scaleY: 1 }}
+            viewport={{ once: true, amount: 0.1 }}
+            transition={{ duration: 1.2, ease: [0.25, 0.1, 0.25, 1] }}
+          />
 
           <FadeInStagger className="space-y-8" stagger={0.12}>
             {fases.map((fase, i) => (
