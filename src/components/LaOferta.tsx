@@ -1,3 +1,6 @@
+'use client'
+
+import { motion } from 'motion/react'
 import { FadeIn, FadeInStagger, FadeInItem } from './FadeIn'
 
 const incluido = [
@@ -73,7 +76,7 @@ const garantias = [
 
 export default function LaOferta() {
     return (
-        <section className="bg-white py-24 lg:py-32 relative overflow-hidden" id="oferta">
+        <section className="bg-white py-16 lg:py-24 relative overflow-hidden" id="oferta">
             {/* Subtle radial accent */}
             <div
                 className="absolute inset-0 pointer-events-none"
@@ -212,7 +215,12 @@ export default function LaOferta() {
                         <p className="text-slate-500">
                             Aceptamos <span className="text-[#1e293b] font-semibold">3 clientes nuevos por trimestre</span>.
                             <span className="text-slate-400"> Es la capacidad real con calidad. </span>
-                            <span className="text-[#c7d2fe] font-semibold">Plazas disponibles este trimestre: 2.</span>
+                            <span className="text-[#c7d2fe] font-semibold">Plazas disponibles este trimestre: <motion.span
+                                className="text-[#f59e0b] font-bold"
+                                animate={{ opacity: [1, 0.3, 1], scale: [1, 1.15, 1] }}
+                                transition={{ duration: 1.8, repeat: Infinity, repeatDelay: 2, ease: 'easeInOut' }}
+                                style={{ display: 'inline-block' }}
+                            >2</motion.span>.</span>
                         </p>
                     </div>
                 </FadeIn>

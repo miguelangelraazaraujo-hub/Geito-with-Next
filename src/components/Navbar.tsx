@@ -30,10 +30,10 @@ export default function Navbar() {
         <a href="#" className="flex items-center">
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
-            src="/Geito-logo.jpeg"
+            src="/Geito-logo.png"
             alt="Geito"
             className="h-9 w-auto rounded-lg"
-            style={{}}
+            style={{ filter: 'invert(1)' }}
           />
         </a>
 

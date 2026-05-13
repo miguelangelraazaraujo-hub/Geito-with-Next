@@ -36,7 +36,7 @@ import { FadeIn, FadeInStagger, FadeInItem } from './FadeIn'
 
 export default function ComoTrabajamos() {
   return (
-    <section className="bg-[#f8fafc] py-24 lg:py-32" id="como-trabajamos">
+    <section className="bg-[#f8fafc] py-16 lg:py-24" id="como-trabajamos">
       <div className="max-w-6xl mx-auto px-6">
         {/* Header */}
         <FadeIn className="max-w-2xl mb-16">

@@ -18,7 +18,7 @@ import { FadeIn, FadeInStagger, FadeInItem } from './FadeIn'
 
 export default function ParaQuienEs() {
     return (
-        <section className="bg-[#f8fafc] py-24 lg:py-32" id="para-quien">
+        <section className="bg-[#f8fafc] py-16 lg:py-24" id="para-quien">
             <div className="max-w-6xl mx-auto px-6">
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
                     {/* Left */}

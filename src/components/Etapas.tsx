@@ -108,7 +108,7 @@ export default function Etapas() {
   }
 
   return (
-    <section className="bg-[#f8fafc] py-24 lg:py-32" id="metodologia">
+    <section className="bg-[#f8fafc] py-16 lg:py-24" id="metodologia">
       <div className="max-w-6xl mx-auto px-6">
         {/* Header */}
         <div className="max-w-2xl mb-16">

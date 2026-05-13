@@ -1,4 +1,4 @@
-﻿const problemas = [
+const problemas = [
   {
     icon: (
       <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
@@ -50,7 +50,7 @@ import { FadeIn, FadeInStagger, FadeInItem } from './FadeIn'
 
 export default function Problema() {
   return (
-    <section className="bg-white py-24 lg:py-32" id="problema">
+    <section className="bg-white py-16 lg:py-24" id="problema">
       <div className="max-w-6xl mx-auto px-6">
         {/* Header */}
         <FadeIn className="max-w-2xl mb-16">

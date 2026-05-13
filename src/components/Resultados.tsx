@@ -161,7 +161,7 @@ function TestimonialCarousel() {
 
 export default function Resultados() {
   return (
-    <section className="bg-white py-24 lg:py-32" id="resultados">
+    <section className="bg-white py-16 lg:py-24" id="resultados">
       <div className="max-w-6xl mx-auto px-6">
         {/* Header */}
         <FadeIn className="max-w-2xl mb-16">
