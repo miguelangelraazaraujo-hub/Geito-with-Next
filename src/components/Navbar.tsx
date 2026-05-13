@@ -33,7 +33,7 @@ export default function Navbar() {
             src="/Geito-logo.jpeg"
             alt="Geito"
             className="h-9 w-auto rounded-lg"
-            style={{  }}
+            style={{}}
           />
         </a>
 
@@ -82,7 +82,7 @@ export default function Navbar() {
 
       {/* Mobile menu */}
       {open && (
-        <div className="lg:hidden bg-[#0f172a] border-t border-white/5 px-6 py-6 space-y-4">
+        <div className="lg:hidden bg-[#254ba1]/80 border-t border-white/5 px-6 py-6 space-y-4">
           {links.map((l) => (
             <a
               key={l.href}

@@ -137,7 +137,7 @@ export default function Hero() {
             >
               Tu empresa
               <br />
-              <span className="text-[#c7d2fe]">funcionando sola.</span>
+              <span className="text-gradient-animated">funcionando sola.</span>
               <br />
               En 90 días.
             </h1>
