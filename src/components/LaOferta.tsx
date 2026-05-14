@@ -302,25 +302,23 @@ export default function LaOferta() {
 
         {/* Scarcity */}
         <FadeIn className="mb-16" delay={0.05}>
-          <div className="flex flex-col lg:flex-row items-center justify-between gap-5 bg-[#eef2ff] border border-[#c7d2fe]/20 rounded-2xl px-7 py-5">
-            <p className="text-sm text-slate-600 max-w-lg leading-relaxed">
+          <div className="flex flex-col gap-4 bg-[#eef2ff] border border-[#c7d2fe]/20 rounded-2xl px-7 py-5">
+            <p className="w-full text-sm text-slate-600 leading-relaxed">
               <span className="font-semibold text-[#1e293b]">Trabajamos con 3 empresas por trimestre.</span>
               {' '}Por elección, no por limitación. Cada cliente recibe atención directa del equipo fundador durante 90 días. Con 3 proyectos simultáneos garantizamos tiempos de respuesta de menos de 4 horas y revisión personal de cada entregable.
             </p>
-            <div className="shrink-0 text-center lg:text-right">
-              <p className="text-[10px] text-slate-400 uppercase tracking-wider mb-1">Disponibilidad este trimestre</p>
-              <div className="flex items-center gap-2 justify-center lg:justify-end">
-                <span className="w-2 h-2 rounded-full bg-[#f59e0b] animate-pulse shrink-0" />
-                <motion.span
-                  className="text-[#f59e0b] font-bold text-2xl"
-                  animate={{ opacity: [1, 0.3, 1], scale: [1, 1.12, 1] }}
-                  transition={{ duration: 1.8, repeat: Infinity, repeatDelay: 2, ease: 'easeInOut' }}
-                  style={{ display: 'inline-block', fontFamily: "'Syne', sans-serif" }}
-                >
-                  2
-                </motion.span>
-                <span className="text-slate-600 font-semibold text-sm">plazas disponibles</span>
-              </div>
+            <div className="flex items-center gap-3 border-t border-[#c7d2fe]/30 pt-3">
+              <p className="text-[10px] text-slate-400 uppercase tracking-wider">Disponibilidad este trimestre</p>
+              <span className="w-2 h-2 rounded-full bg-[#f59e0b] animate-pulse shrink-0" />
+              <motion.span
+                className="text-[#f59e0b] font-bold text-lg"
+                animate={{ opacity: [1, 0.3, 1], scale: [1, 1.12, 1] }}
+                transition={{ duration: 1.8, repeat: Infinity, repeatDelay: 2, ease: 'easeInOut' }}
+                style={{ display: 'inline-block', fontFamily: "'Syne', sans-serif" }}
+              >
+                2
+              </motion.span>
+              <span className="text-slate-600 font-semibold text-sm">plazas disponibles</span>
             </div>
           </div>
         </FadeIn>
