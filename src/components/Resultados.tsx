@@ -1,42 +1,34 @@
 'use client'
 
+import { useRef, useEffect, useState } from 'react'
+import { motion, AnimatePresence, animate, useInView } from 'motion/react'
+import { FadeIn, FadeInStagger, FadeInItem } from './FadeIn'
+
 const resultados = [
   {
-    metrica: '−60%',
+    value: 60, prefix: '−', suffix: '%',
     label: 'Tiempo en tareas repetitivas',
     descripcion: 'Logística B2B, 35 empleados: pedido de 14 a 5 min. ~32 h/semana liberadas.',
     compact: false,
   },
   {
-    metrica: '100%',
+    value: 100, prefix: '', suffix: '%',
     label: 'Trazabilidad de procesos',
     descripcion: 'Cada paso registrado y auditable. Fin de las reuniones de "¿quién hizo qué cuándo?".',
     compact: false,
   },
   {
-    metrica: '×3',
+    value: 3, prefix: '×', suffix: '',
     label: 'Capacidad de escala',
     descripcion: 'Sumar el siguiente cliente deja de implicar sumar persona. El sistema absorbe el volumen.',
     compact: false,
   },
   {
-    metrica: '< 4 meses',
+    value: 4, prefix: '< ', suffix: ' meses',
     label: 'ROI medio del proyecto',
     descripcion: 'Las primeras automatizaciones se pagan desde el mes 1. ROI total típico antes del cuarto.',
     compact: true,
   },
-]
-
-import { useState, useEffect } from 'react'
-import { motion, AnimatePresence } from 'motion/react'
-import { FadeIn, FadeInStagger, FadeInItem } from './FadeIn'
-
-const logos = [
-  { name: 'Grupo Alvare', weight: '700' },
-  { name: 'TechFlow', weight: '400' },
-  { name: 'Nexora', weight: '600' },
-  { name: 'BrandCore', weight: '700' },
-  { name: 'Operativa', weight: '400' },
 ]
 
 const testimonios = [
@@ -62,6 +54,40 @@ const testimonios = [
     initials: 'DI',
   },
 ]
+
+function AnimatedCounter({ value, prefix = '', suffix = '', compact }: {
+  value: number
+  prefix?: string
+  suffix?: string
+  compact?: boolean
+}) {
+  const ref = useRef<HTMLSpanElement>(null)
+  const inView = useInView(ref, { once: true, amount: 0.5 })
+
+  useEffect(() => {
+    if (!inView) return
+    const controls = animate(0, value, {
+      duration: 2,
+      ease: 'easeOut',
+      onUpdate: (latest) => {
+        if (ref.current) {
+          ref.current.textContent = `${prefix}${Math.round(latest)}${suffix}`
+        }
+      },
+    })
+    return controls.stop
+  }, [inView, value, prefix, suffix])
+
+  return (
+    <span
+      ref={ref}
+      className={`font-bold text-[#f59e0b] mb-3 group-hover:text-[#fbbf24] whitespace-nowrap ${compact ? 'text-3xl' : 'text-4xl'}`}
+      style={{ fontFamily: "'Syne', sans-serif" }}
+    >
+      {prefix}0{suffix}
+    </span>
+  )
+}
 
 function TestimonialCarousel() {
   const [current, setCurrent] = useState(0)
@@ -89,7 +115,7 @@ function TestimonialCarousel() {
             transition={{ duration: 0.45, ease: [0.25, 0.1, 0.25, 1] }}
           >
             <p className="text-gray-600 text-lg leading-relaxed italic mb-6">
-              "{testimonios[current].quote}"
+              &quot;{testimonios[current].quote}&quot;
             </p>
             <div className="flex items-center justify-center gap-3">
               <div
@@ -127,7 +153,7 @@ function TestimonialCarousel() {
 
 export default function Resultados() {
   return (
-    <section className="bg-white py-24 lg:py-32" id="resultados">
+    <section className="bg-white py-16 lg:py-24" id="resultados">
       <div className="max-w-6xl mx-auto px-6">
         {/* Header */}
         <FadeIn className="max-w-2xl mb-16">
@@ -153,12 +179,12 @@ export default function Resultados() {
           {resultados.map((r, i) => (
             <FadeInItem key={i}>
               <div className="group p-8 bg-[#eef2ff] rounded-2xl hover:bg-[#254ba1] transition-all duration-300 h-full">
-                <p
-                  className={`font-bold text-[#f59e0b] mb-3 group-hover:text-[#fbbf24] whitespace-nowrap ${r.compact ? 'text-3xl' : 'text-4xl'}`}
-                  style={{ fontFamily: "'Syne', sans-serif" }}
-                >
-                  {r.metrica}
-                </p>
+                <AnimatedCounter
+                  value={r.value}
+                  prefix={r.prefix}
+                  suffix={r.suffix}
+                  compact={r.compact}
+                />
                 <p className="text-sm font-semibold text-[#1e293b] mb-2 group-hover:text-white">
                   {r.label}
                 </p>
@@ -205,7 +231,7 @@ export default function Resultados() {
               >
                 El objetivo no es tener tecnología.
                 <br />
-                <span className="text-[#c7d2fe]">Es que funcione para ti.</span>
+                <span className="text-gradient-animated">Es que funcione para ti.</span>
               </h3>
               <p className="text-white/60 leading-relaxed">
                 Cada implementación de Geito está medida por impacto en el negocio,

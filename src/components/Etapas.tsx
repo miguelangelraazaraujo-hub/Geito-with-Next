@@ -13,9 +13,6 @@ const etapas = [
     descripcion:
       'Mapeamos cada flujo crítico de tu empresa. Salimos con la lista de los 5-15 procesos donde la automatización paga su coste en menos de 90 días. En el último cliente identificamos 23 oportunidades en esta fase.',
     resultado: 'Mapa de procesos firmado y priorizado por ROI',
-    color: 'bg-[#0f172a]',
-    accent: 'text-[#c7d2fe]',
-    border: 'border-[#c7d2fe]',
     icon: (
       <svg width="28" height="28" viewBox="0 0 28 28" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
         <rect x="4" y="4" width="8" height="8" rx="1" />
@@ -32,9 +29,6 @@ const etapas = [
     descripcion:
       'Implementamos las herramientas mínimas necesarias para que tu equipo trabaje sin papel ni Excel-ping-pong. Sin sobredimensionar: tu pyme no necesita SAP. Solo lo que mueve la aguja en tu sector.',
     resultado: 'Stack digital operativo y equipo formado',
-    color: 'bg-[#eef2ff]',
-    accent: 'text-[#4f46e5]',
-    border: 'border-[#4f46e5]',
     icon: (
       <svg width="28" height="28" viewBox="0 0 28 28" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
         <rect x="3" y="6" width="22" height="16" rx="2" />
@@ -50,9 +44,6 @@ const etapas = [
     descripcion:
       'Conectamos tus sistemas y dejamos en producción al menos 3 flujos automatizados que liberan 8-15 horas/semana al equipo. Garantizado en contrato. Tu gente deja de copiar datos y se dedica a lo que aporta valor real.',
     resultado: 'Mínimo 3 automatizaciones en producción y midiendo impacto',
-    color: 'bg-[#0f172a]',
-    accent: 'text-[#c7d2fe]',
-    border: 'border-[#c7d2fe]',
     icon: (
       <svg width="28" height="28" viewBox="0 0 28 28" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
         <path d="M14 4v4M14 20v4M4 14h4M20 14h4" />
@@ -68,9 +59,6 @@ const etapas = [
     descripcion:
       'Solo cuando los datos están limpios y los procesos definidos, la IA tiene sentido. La aplicamos donde mueve la aguja: análisis predictivo, generación de contenido a escala, asistentes internos, soporte a decisiones. Sin IA decorativa.',
     resultado: 'IA integrada en al menos 2 procesos críticos del negocio',
-    color: 'bg-[#eef2ff]',
-    accent: 'text-[#4f46e5]',
-    border: 'border-[#4f46e5]',
     icon: (
       <svg width="28" height="28" viewBox="0 0 28 28" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
         <path d="M14 3a4 4 0 0 1 4 4c0 1.5-.8 2.8-2 3.5V13h-4v-2.5A4 4 0 0 1 14 3z" />
@@ -108,7 +96,7 @@ export default function Etapas() {
   }
 
   return (
-    <section className="bg-[#f8fafc] py-24 lg:py-32" id="metodologia">
+    <section className="bg-[#f8fafc] py-16 lg:py-24" id="metodologia">
       <div className="max-w-6xl mx-auto px-6">
         {/* Header */}
         <div className="max-w-2xl mb-16">

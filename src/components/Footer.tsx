@@ -23,7 +23,7 @@ export default function Footer() {
             src="/Geito-logo-lg.png"
             alt="Geito"
             className="block h-10 w-fit rounded-lg"
-            style={{  }}
+            style={{ filter: 'invert(1)' }}
           />
           <p className="text-white/40 text-sm leading-relaxed max-w-xs">
             Transformación digital B2B. Ordenamos, digitalizamos y automatizamos

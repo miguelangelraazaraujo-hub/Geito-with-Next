@@ -2,7 +2,7 @@ import { FadeIn } from './FadeIn'
 
 export default function SobreNosotros() {
   return (
-    <section className="bg-[#f8fafc] py-24 lg:py-32" id="nosotros">
+    <section className="bg-[#f8fafc] py-16 lg:py-24" id="nosotros">
       <div className="max-w-6xl mx-auto px-6">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           {/* Left: visual / identity */}
@@ -12,10 +12,10 @@ export default function SobreNosotros() {
               <div>
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
-                  src="/Geito-logo.jpeg"
+                  src="/Geito-logo.png"
                   alt="Geito"
                   className="h-12 w-auto mb-6 rounded-xl"
-                  style={{  }}
+                  style={{ filter: 'invert(1)' }}
                 />
                 <p className="text-[#c7d2fe] text-sm">Transformación digital B2B</p>
               </div>

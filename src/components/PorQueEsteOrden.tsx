@@ -1,8 +1,8 @@
-﻿import { FadeIn, FadeInStagger, FadeInItem } from './FadeIn'
+import { FadeIn, FadeInStagger, FadeInItem } from './FadeIn'
 
 export default function PorQueEsteOrden() {
   return (
-    <section className="bg-white py-24 lg:py-32" id="por-que">
+    <section className="bg-white py-16 lg:py-24" id="por-que">
       <div className="max-w-6xl mx-auto px-6">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           {/* Left: visual */}
