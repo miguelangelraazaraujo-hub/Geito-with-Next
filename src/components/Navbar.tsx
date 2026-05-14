@@ -32,8 +32,8 @@ export default function Navbar() {
           <img
             src="/Geito-logo.png"
             alt="Geito"
-            className="h-9 w-auto rounded-lg"
-            style={{ filter: 'invert(1)' }}
+            className="h-14 w-auto rounded-lg"
+            style={{ filter: 'invert(1) brightness(1.15) drop-shadow(0 1px 4px rgba(0,0,0,0.25))' }}
           />
         </a>
 

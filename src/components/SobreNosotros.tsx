@@ -1,27 +1,72 @@
+'use client'
+
+import { useRef, useEffect } from 'react'
+import { animate, useInView } from 'motion/react'
 import { FadeIn } from './FadeIn'
+
+const metricas = [
+  { num: 60, prefix: '−', suffix: '%', label: 'tareas repetitivas' },
+  { num: 3,  prefix: '',  suffix: '×', label: 'capacidad de escala' },
+  { num: 90, prefix: '',  suffix: 'd', label: 'o seguimos sin coste' },
+]
+
+function AnimatedCounter({ num, prefix, suffix }: { num: number; prefix: string; suffix: string }) {
+  const ref = useRef<HTMLSpanElement>(null)
+  const inView = useInView(ref, { once: true, amount: 0.5 })
+
+  useEffect(() => {
+    if (!inView) return
+    const controls = animate(0, num, {
+      duration: 1.8,
+      ease: 'easeOut',
+      onUpdate: (latest) => {
+        if (ref.current) ref.current.textContent = `${prefix}${Math.round(latest)}${suffix}`
+      },
+    })
+    return controls.stop
+  }, [inView, num, prefix, suffix])
+
+  return (
+    <span ref={ref} className="text-[#f59e0b] font-bold text-2xl" style={{ fontFamily: "'Syne', sans-serif" }}>
+      {prefix}0{suffix}
+    </span>
+  )
+}
 
 export default function SobreNosotros() {
   return (
     <section className="bg-[#f8fafc] py-16 lg:py-24" id="nosotros">
       <div className="max-w-6xl mx-auto px-6">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+
           {/* Left: visual / identity */}
           <FadeIn direction="left">
             <div className="bg-[#254ba1] rounded-3xl p-12 flex flex-col justify-between min-h-[420px]">
+
               {/* Logo mark */}
               <div>
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
                   src="/Geito-logo.png"
                   alt="Geito"
-                  className="h-12 w-auto mb-6 rounded-xl"
-                  style={{ filter: 'invert(1)' }}
+                  className="h-20 w-auto mb-6 rounded-xl"
+                  style={{ filter: 'invert(1) brightness(1.15) drop-shadow(0 1px 4px rgba(0,0,0,0.25))' }}
                 />
                 <p className="text-[#c7d2fe] text-sm">Transformación digital B2B</p>
               </div>
 
+              {/* Métricas animadas */}
+              <div className="grid grid-cols-3 gap-2 my-8 border-t border-b border-white/10 py-6">
+                {metricas.map((m) => (
+                  <div key={m.label} className="text-center">
+                    <AnimatedCounter num={m.num} prefix={m.prefix} suffix={m.suffix} />
+                    <p className="text-white/50 text-xs leading-tight mt-1">{m.label}</p>
+                  </div>
+                ))}
+              </div>
+
               {/* Values */}
-              <div className="space-y-4 mt-10">
+              <div className="space-y-4">
                 {['Método antes que herramienta', 'Implementación real, no consultoría', 'Compromiso con el resultado'].map((v, i) => (
                   <div key={i} className="flex items-center gap-3">
                     <div className="w-1.5 h-1.5 rounded-full bg-[#c7d2fe]" />
@@ -29,6 +74,7 @@ export default function SobreNosotros() {
                   </div>
                 ))}
               </div>
+
             </div>
           </FadeIn>
 
@@ -64,6 +110,7 @@ export default function SobreNosotros() {
               </p>
             </div>
           </FadeIn>
+
         </div>
       </div>
     </section>
