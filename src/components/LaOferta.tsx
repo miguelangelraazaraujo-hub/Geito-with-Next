@@ -307,11 +307,11 @@ export default function LaOferta() {
               <span className="font-semibold text-[#1e293b]">Trabajamos con 3 empresas por trimestre.</span>
               {' '}Por elección, no por limitación. Cada cliente recibe atención directa del equipo fundador durante 90 días. Con 3 proyectos simultáneos garantizamos tiempos de respuesta de menos de 4 horas y revisión personal de cada entregable.
             </p>
-            <div className="flex items-center gap-3 border-t border-[#c7d2fe]/30 pt-3">
+            <div className="flex items-center justify-center gap-2 -mt-2">
               <p className="text-[10px] text-slate-400 uppercase tracking-wider">Disponibilidad este trimestre</p>
               <span className="w-2 h-2 rounded-full bg-[#f59e0b] animate-pulse shrink-0" />
               <motion.span
-                className="text-[#f59e0b] font-bold text-lg"
+                className="text-[#f59e0b] font-bold text-base"
                 animate={{ opacity: [1, 0.3, 1], scale: [1, 1.12, 1] }}
                 transition={{ duration: 1.8, repeat: Infinity, repeatDelay: 2, ease: 'easeInOut' }}
                 style={{ display: 'inline-block', fontFamily: "'Syne', sans-serif" }}
