@@ -1,0 +1,17 @@
+{
+  "version": 1,
+  "skills": {
+    "phi-json-soul-integrated": {
+      "source": "ricautomation/logic_avatars_creator_skills",
+      "sourceType": "github",
+      "skillPath": "phi_json_soul/SKILL.md",
+      "computedHash": "eee90bb3505d06b747b13ce8216aa5b04d5428fe0ae41cc21662564eb668a526"
+    },
+    "psi260-avatar": {
+      "source": "ricautomation/logic_avatars_creator_skills",
+      "sourceType": "github",
+      "skillPath": "psi260-avatar/SKILL.md",
+      "computedHash": "d30a1b46829ad7a354480e6c60b28866bf0e66b692b27daacd6bea9a7ddb081b"
+    }
+  }
+}

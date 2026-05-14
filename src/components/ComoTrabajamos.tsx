@@ -1,5 +1,8 @@
 'use client'
 
+import { motion } from 'motion/react'
+import { FadeIn, FadeInStagger, FadeInItem } from './FadeIn'
+
 const fases = [
   {
     numero: '1',
@@ -31,9 +34,6 @@ const fases = [
   },
 ]
 
-import { motion } from 'motion/react'
-import { FadeIn, FadeInStagger, FadeInItem } from './FadeIn'
-
 export default function ComoTrabajamos() {
   return (
     <section className="bg-[#f8fafc] py-16 lg:py-24" id="como-trabajamos">
@@ -61,7 +61,7 @@ export default function ComoTrabajamos() {
 
           {/* Línea animada encima */}
           <motion.div
-            className="hidden lg:block absolute left-[27px] top-10 w-px bg-gradient-to-b from-[#254ba1] via-[#c7d2fe] to-[#c7d2fe]/20 origin-top"
+            className="hidden lg:block absolute left-[27px] top-10 w-px bg-linear-to-b from-[#254ba1] via-[#c7d2fe] to-[#c7d2fe]/20 origin-top"
             style={{ bottom: 40 }}
             initial={{ scaleY: 0 }}
             whileInView={{ scaleY: 1 }}

@@ -1,3 +1,5 @@
+import { FadeIn, FadeInStagger, FadeInItem } from './FadeIn'
+
 const problemas = [
   {
     icon: (
@@ -45,8 +47,6 @@ const problemas = [
       'Cada cliente nuevo cuesta lo mismo en horas-equipo que el anterior. Eso no es crecer: es sumar coste fijo al mismo ritmo que el ingreso.',
   },
 ]
-
-import { FadeIn, FadeInStagger, FadeInItem } from './FadeIn'
 
 export default function Problema() {
   return (

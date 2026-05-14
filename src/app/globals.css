@@ -24,6 +24,45 @@ body {
   animation-delay: var(--check-delay, 0s);
 }
 
+/* ── Scrollbar personalizada ── */
+
+/* Firefox únicamente — scrollbar-color en Chrome/Edge 121+ anula los pseudo-elementos webkit */
+@supports (-moz-appearance: none) {
+  html {
+    scrollbar-color: #254ba1 transparent;
+    scrollbar-width: thin;
+  }
+}
+
+/* Chrome, Edge, Safari — pseudo-elementos webkit */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-button {
+  display: none; /* elimina las flechas arriba/abajo */
+}
+
+::-webkit-scrollbar-track,
+::-webkit-scrollbar-track-piece {
+  background: transparent;
+  border: none;
+  box-shadow: none;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #254ba1;
+  border-radius: 99px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #1e3a8a;
+}
+
+::-webkit-scrollbar-corner {
+  background: transparent;
+}
+
 @keyframes gradient-flow {
   0%   { background-position: 0% center; }
   100% { background-position: 200% center; }

@@ -1,5 +1,9 @@
 'use client'
 
+import { useRef, useEffect, useState } from 'react'
+import { motion, AnimatePresence, animate, useInView } from 'motion/react'
+import { FadeIn, FadeInStagger, FadeInItem } from './FadeIn'
+
 const resultados = [
   {
     value: 60, prefix: '−', suffix: '%',
@@ -27,9 +31,29 @@ const resultados = [
   },
 ]
 
-import { useRef, useEffect, useState } from 'react'
-import { motion, AnimatePresence, animate, useInView } from 'motion/react'
-import { FadeIn, FadeInStagger, FadeInItem } from './FadeIn'
+const testimonios = [
+  {
+    quote: 'En 11 semanas pasamos de procesos en papel a un sistema con 7 flujos automatizados. El equipo recuperó 28 h/semana. La inversión se devolvió en el mes 4.',
+    name: 'Dirección de Operaciones',
+    role: 'Logística B2B',
+    company: '35 empleados',
+    initials: 'OL',
+  },
+  {
+    quote: 'Antes teníamos datos en cuatro herramientas y nadie sabía qué era fiable. Hoy hay un único dashboard. Las reuniones bajaron de hora a 20 minutos.',
+    name: 'CEO',
+    role: 'SaaS B2B',
+    company: '22 empleados',
+    initials: 'CS',
+  },
+  {
+    quote: 'Otros nos vendían IA directamente. Geito insistió en ordenar primero los procesos. Tenían razón: ahora la IA aporta valor real, no humo.',
+    name: 'Dirección General',
+    role: 'Industrial',
+    company: '48 empleados',
+    initials: 'DI',
+  },
+]
 
 function AnimatedCounter({ value, prefix = '', suffix = '', compact }: {
   value: number
@@ -65,38 +89,6 @@ function AnimatedCounter({ value, prefix = '', suffix = '', compact }: {
   )
 }
 
-const logos = [
-  { name: 'Grupo Alvare', weight: '700' },
-  { name: 'TechFlow', weight: '400' },
-  { name: 'Nexora', weight: '600' },
-  { name: 'BrandCore', weight: '700' },
-  { name: 'Operativa', weight: '400' },
-]
-
-const testimonios = [
-  {
-    quote: 'En 11 semanas pasamos de procesos en papel a un sistema con 7 flujos automatizados. El equipo recuperó 28 h/semana. La inversión se devolvió en el mes 4.',
-    name: 'Dirección de Operaciones',
-    role: 'Logística B2B',
-    company: '35 empleados',
-    initials: 'OL',
-  },
-  {
-    quote: 'Antes teníamos datos en cuatro herramientas y nadie sabía qué era fiable. Hoy hay un único dashboard. Las reuniones bajaron de hora a 20 minutos.',
-    name: 'CEO',
-    role: 'SaaS B2B',
-    company: '22 empleados',
-    initials: 'CS',
-  },
-  {
-    quote: 'Otros nos vendían IA directamente. Geito insistió en ordenar primero los procesos. Tenían razón: ahora la IA aporta valor real, no humo.',
-    name: 'Dirección General',
-    role: 'Industrial',
-    company: '48 empleados',
-    initials: 'DI',
-  },
-]
-
 function TestimonialCarousel() {
   const [current, setCurrent] = useState(0)
 
@@ -123,7 +115,7 @@ function TestimonialCarousel() {
             transition={{ duration: 0.45, ease: [0.25, 0.1, 0.25, 1] }}
           >
             <p className="text-gray-600 text-lg leading-relaxed italic mb-6">
-              "{testimonios[current].quote}"
+              &quot;{testimonios[current].quote}&quot;
             </p>
             <div className="flex items-center justify-center gap-3">
               <div
