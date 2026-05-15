@@ -1,0 +1,35 @@
+name: Deploy to FTP
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    name: Sync to geito.pro via FTP
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: FTP Deploy
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+        with:
+          server: ${{ secrets.FTP_SERVER }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          server-dir: /home/Geito/web/geito.pro/
+          local-dir: ./
+          protocol: ftp
+          port: 21
+          exclude: |
+            **/.git*
+            **/.git*/**
+            **/.github/**
+            **/node_modules/**
+            **/.DS_Store
+            **/README.md
+            **/.env*
