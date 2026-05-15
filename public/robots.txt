@@ -1,0 +1,23 @@
+User-agent: *
+Allow: /
+
+# AI search engines — explicitly allowed for GEO
+User-agent: GPTBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Googlebot
+Allow: /
+
+Sitemap: https://geito.pro/sitemap.xml
