@@ -21,7 +21,7 @@ jobs:
           server: ${{ secrets.FTP_SERVER }}
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
-          server-dir: /home/Geito/web/geito.pro/
+          server-dir: /home/Geito_github/public_html/
           local-dir: ./
           protocol: ftp
           port: 21
