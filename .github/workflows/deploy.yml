@@ -8,12 +8,24 @@ on:
 
 jobs:
   deploy:
-    name: Sync to geito.pro via FTP
+    name: Build & Sync to geito.pro via FTP
     runs-on: ubuntu-latest
 
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build static export
+        run: npm run build
 
       - name: FTP Deploy
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
@@ -22,14 +34,6 @@ jobs:
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
           server-dir: /home/Geito/web/geito.pro/
-          local-dir: ./
+          local-dir: ./out/
           protocol: ftp
           port: 21
-          exclude: |
-            **/.git*
-            **/.git*/**
-            **/.github/**
-            **/node_modules/**
-            **/.DS_Store
-            **/README.md
-            **/.env*
